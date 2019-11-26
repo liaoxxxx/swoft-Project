@@ -7,5 +7,13 @@
  * @contact  group@swoft.org
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
-require_once dirname(__DIR__) . '/vendor/autoload.php';
+namespace App\Exception;
 
+/**
+ * Class ApiException
+ *
+ * @since 2.0
+ */
+class ApiException extends \Exception
+{
+}

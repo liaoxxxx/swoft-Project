@@ -7,5 +7,8 @@
  * @contact  group@swoft.org
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
-require_once dirname(__DIR__) . '/vendor/autoload.php';
 
+function user_func(): string
+{
+    return 'hello';
+}
