@@ -16,7 +16,7 @@ use App\Helper\SqlTimeTool;
 
 class GoodsCategoryLogic
 {
-
+    private static array $map=['status'=>1];
 
     public function __construct()
     {
@@ -48,63 +48,30 @@ class GoodsCategoryLogic
      * @param GoodsCategory $goodsCategory
      * @return bool
      */
-    public static function save(GoodsCategory $goodsCategory) {
-        $goodsCategory->save();
-    }
+    public static function save(GoodsCategory $goodsCategory):bool {
 
-
-
-    /** 校验admin 状态，权限等
-     * @param $admin  Admin
-     * @return string
-     */
-    public static function checkAdminStatus(Admin $admin): string {
-
-            return  '1';
-
-    }
-
-
-
-
-    /** 生成密码
-     *@param $salt string
-     *@param $password string
-     * @return string
-     */
-    public static function genPassword(string $salt,string $password):string {
-        return md5($salt.$password);
-    }
-
-    /**
-     * 保存 admin 的数据到  缓存系统
-     * @param AdminCacheStrategy $adminCacheObject
-     * @param string $key
-     * @param array $adminData
-     */
-    public static function saveAdmin2Cache(AdminCacheStrategy $adminCacheObject, string $key, array $adminData){
-        $adminCacheObject->save($key,$adminData);
+      return GoodsCategoryDao::save($goodsCategory);
     }
 
 
     /**
-     * 通过缓存系统获取 admin的数据
-     * @param AdminCacheStrategy $adminCacheObject
-     * @param string $key
+     * @param int $id
      * @return array
+     * @throws DbException
      */
-    public static function getAdminByCache(AdminCacheStrategy $adminCacheObject, string $key):array {
-        return $adminCacheObject->get($key);
+    public static function findOne(int $id  ): array
+    {
+         $cateGoryItem= GoodsCategoryDao::findOne($id);
+           return $cateGoryItem->toArray();
     }
 
 
     /**
      * 生成缓存的key
-     * @param Admin $admin
+     * @param array $post
      * @return string
      */
-    public static function genCacheKey(Admin $admin):string {
-        return "admin".$admin->getId();
+    public static function edit(array $post):string {
     }
 
 

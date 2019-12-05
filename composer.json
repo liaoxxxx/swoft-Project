@@ -9,7 +9,7 @@
   "description": "Modern High performance AOP and Coroutine PHP Framework",
   "license": "Apache-2.0",
   "require": {
-    "php": ">7.1",
+    "php": "7.4",
     "ext-pdo": "*",
     "ext-redis": "*",
     "ext-json": "*",
@@ -37,8 +37,6 @@
     "ext-openssl": "*",
     "lcobucci/jwt": "^3.3",
     "swoft/validator": "^2.0",
-    "ext-zend": "*",
-    "ext-zendutils": "*",
     "ext-sockets": "*"
   },
   "require-dev": {

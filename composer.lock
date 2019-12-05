@@ -1,23 +1,23 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "859002266798c0837a9a43ee37c240e9",
+    "content-hash": "c7886bb9aca568cd91f7d786b889c421",
     "packages": [
         {
             "name": "doctrine/annotations",
-            "version": "v1.7.0",
+            "version": "v1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "fa4c4e861e809d6a1103bd620cce63ed91aedfeb"
+                "reference": "904dca4eb10715b92569fbcd79e201d5c349b6bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/fa4c4e861e809d6a1103bd620cce63ed91aedfeb",
-                "reference": "fa4c4e861e809d6a1103bd620cce63ed91aedfeb",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/904dca4eb10715b92569fbcd79e201d5c349b6bc",
+                "reference": "904dca4eb10715b92569fbcd79e201d5c349b6bc",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
             },
             "require-dev": {
                 "doctrine/cache": "1.*",
-                "phpunit/phpunit": "^7.5@dev"
+                "phpunit/phpunit": "^7.5"
             },
             "type": "library",
             "extra": {
@@ -72,20 +72,20 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2019-08-08T18:11:40+00:00"
+            "time": "2019-10-01T18:55:10+00:00"
         },
         {
             "name": "doctrine/lexer",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/lexer.git",
-                "reference": "e17f069ede36f7534b95adec71910ed1b49c74ea"
+                "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/lexer/zipball/e17f069ede36f7534b95adec71910ed1b49c74ea",
-                "reference": "e17f069ede36f7534b95adec71910ed1b49c74ea",
+                "url": "https://api.github.com/repos/doctrine/lexer/zipball/5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
+                "reference": "5242d66dbeb21a30dd8a3e66bf7a73b66e05e1f6",
                 "shasum": ""
             },
             "require": {
@@ -99,7 +99,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -134,7 +134,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-07-30T19:33:28+00:00"
+            "time": "2019-10-30T14:39:59+00:00"
         },
         {
             "name": "lcobucci/jwt",
@@ -193,16 +193,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.25.1",
+            "version": "1.25.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf"
+                "reference": "d5e2fb341cb44f7e2ab639d12a1e5901091ec287"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
-                "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/d5e2fb341cb44f7e2ab639d12a1e5901091ec287",
+                "reference": "d5e2fb341cb44f7e2ab639d12a1e5901091ec287",
                 "shasum": ""
             },
             "require": {
@@ -267,20 +267,20 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2019-09-06T13:49:17+00:00"
+            "time": "2019-11-13T10:00:05+00:00"
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.4",
+            "version": "v4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4"
+                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/97e59c7a16464196a8b9c77c47df68e4a39a45c4",
-                "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/9a9981c347c5c49d6dfe5cf826bb882b824080dc",
+                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc",
                 "shasum": ""
             },
             "require": {
@@ -288,6 +288,7 @@
                 "php": ">=7.0"
             },
             "require-dev": {
+                "ircmaxell/php-yacc": "0.0.5",
                 "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
             },
             "bin": [
@@ -296,7 +297,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.2-dev"
+                    "dev-master": "4.3-dev"
                 }
             },
             "autoload": {
@@ -318,20 +319,20 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-09-01T07:51:21+00:00"
+            "time": "2019-11-08T13:50:10+00:00"
         },
         {
             "name": "php-di/phpdoc-reader",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-DI/PhpDocReader.git",
-                "reference": "7d0de60b9341933c8afd172a6255cd7557601e0e"
+                "reference": "15678f7451c020226807f520efb867ad26fbbfcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-DI/PhpDocReader/zipball/7d0de60b9341933c8afd172a6255cd7557601e0e",
-                "reference": "7d0de60b9341933c8afd172a6255cd7557601e0e",
+                "url": "https://api.github.com/repos/PHP-DI/PhpDocReader/zipball/15678f7451c020226807f520efb867ad26fbbfcf",
+                "reference": "15678f7451c020226807f520efb867ad26fbbfcf",
                 "shasum": ""
             },
             "require": {
@@ -355,32 +356,32 @@
                 "phpdoc",
                 "reflection"
             ],
-            "time": "2018-02-18T17:39:01+00:00"
+            "time": "2019-09-26T11:24:58+00:00"
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.5.0",
+            "version": "1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed"
+                "reference": "2ba2586380f8d2b44ad1b9feb61c371020b27793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/94e644f7d2051a5f0fcf77d81605f152eecff0ed",
-                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/2ba2586380f8d2b44ad1b9feb61c371020b27793",
+                "reference": "2ba2586380f8d2b44ad1b9feb61c371020b27793",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.7.*"
+                "phpunit/phpunit": "^4.7|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -390,7 +391,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "Apache2"
+                "Apache-2.0"
             ],
             "authors": [
                 {
@@ -405,7 +406,7 @@
                 "php",
                 "type"
             ],
-            "time": "2015-07-25T16:39:46+00:00"
+            "time": "2019-11-06T22:27:00+00:00"
         },
         {
             "name": "psr/cache",
@@ -660,16 +661,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.1.0",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
+                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
-                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/446d54b4cb6bf489fc9d75f55843658e6f25d801",
+                "reference": "446d54b4cb6bf489fc9d75f55843658e6f25d801",
                 "shasum": ""
             },
             "require": {
@@ -678,7 +679,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -703,20 +704,20 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2018-11-20T15:27:04+00:00"
+            "time": "2019-11-01T11:05:21+00:00"
         },
         {
             "name": "swoft/annotation",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-annotation.git",
-                "reference": "1bf064b67082cd826a80e83bc1e311ca60141863"
+                "reference": "518256ad9b3c24c7f1e57d0eac85c74d1933445b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-annotation/zipball/1bf064b67082cd826a80e83bc1e311ca60141863",
-                "reference": "1bf064b67082cd826a80e83bc1e311ca60141863",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-annotation/zipball/518256ad9b3c24c7f1e57d0eac85c74d1933445b",
+                "reference": "518256ad9b3c24c7f1e57d0eac85c74d1933445b",
                 "shasum": ""
             },
             "require": {
@@ -739,25 +740,27 @@
                 "Apache-2.0"
             ],
             "description": "swoft annotation component",
+            "homepage": "https://github.com/swoft-cloud/swoft-annotation",
             "keywords": [
+                "annotation",
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/aop",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-aop.git",
-                "reference": "3a81764bf269eb5c340462fae2d8a6e931ccb881"
+                "reference": "7cddf76e3917c2a30010d8738ac0e90ca44a9730"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-aop/zipball/3a81764bf269eb5c340462fae2d8a6e931ccb881",
-                "reference": "3a81764bf269eb5c340462fae2d8a6e931ccb881",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-aop/zipball/7cddf76e3917c2a30010d8738ac0e90ca44a9730",
+                "reference": "7cddf76e3917c2a30010d8738ac0e90ca44a9730",
                 "shasum": ""
             },
             "require": {
@@ -770,7 +773,6 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [],
                 "psr-4": {
                     "Swoft\\Aop\\": "src/"
                 }
@@ -780,26 +782,27 @@
                 "Apache-2.0"
             ],
             "description": "swoft aop component",
+            "homepage": "https://github.com/swoft-cloud/swoft-aop",
             "keywords": [
                 "aop",
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/apollo",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-apollo.git",
-                "reference": "5567ac611b45b3867512c1d56e3d7d14d0447f80"
+                "reference": "1df8d3786511dac1b309a900fbd333383b758f1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-apollo/zipball/5567ac611b45b3867512c1d56e3d7d14d0447f80",
-                "reference": "5567ac611b45b3867512c1d56e3d7d14d0447f80",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-apollo/zipball/1df8d3786511dac1b309a900fbd333383b758f1e",
+                "reference": "1df8d3786511dac1b309a900fbd333383b758f1e",
                 "shasum": ""
             },
             "require": {
@@ -825,20 +828,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:50:08+00:00"
+            "time": "2019-11-17T16:42:05+00:00"
         },
         {
             "name": "swoft/bean",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-bean.git",
-                "reference": "6326b3e8c13f96b42d694023aae9468569f872cd"
+                "reference": "fd0d8d1b4ab02789331a5723241cd13a475a01ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-bean/zipball/6326b3e8c13f96b42d694023aae9468569f872cd",
-                "reference": "6326b3e8c13f96b42d694023aae9468569f872cd",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-bean/zipball/fd0d8d1b4ab02789331a5723241cd13a475a01ec",
+                "reference": "fd0d8d1b4ab02789331a5723241cd13a475a01ec",
                 "shasum": ""
             },
             "require": {
@@ -853,7 +856,6 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [],
                 "psr-4": {
                     "Swoft\\Bean\\": "src/"
                 },
@@ -866,25 +868,29 @@
                 "Apache-2.0"
             ],
             "description": "micro-service framework base on swoole",
+            "homepage": "https://github.com/swoft-cloud/swoft-bean",
             "keywords": [
+                "bean",
+                "container",
                 "php",
                 "swoft",
+                "swoft-bean",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/breaker",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-breaker.git",
-                "reference": "87417249773c1cd9cfa558f77a940b1706ece5d1"
+                "reference": "e2baf70fcf4317390f9a6fe92ae2372388548a84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-breaker/zipball/87417249773c1cd9cfa558f77a940b1706ece5d1",
-                "reference": "87417249773c1cd9cfa558f77a940b1706ece5d1",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-breaker/zipball/e2baf70fcf4317390f9a6fe92ae2372388548a84",
+                "reference": "e2baf70fcf4317390f9a6fe92ae2372388548a84",
                 "shasum": ""
             },
             "require": {
@@ -910,20 +916,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:50:08+00:00"
+            "time": "2019-11-17T16:42:05+00:00"
         },
         {
             "name": "swoft/config",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-config.git",
-                "reference": "c3c16246f1f65e2bc42e449b09cc8e3820c09739"
+                "reference": "d39ba9fcf7557ac612c9a7e5723d08fb13e4a144"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-config/zipball/c3c16246f1f65e2bc42e449b09cc8e3820c09739",
-                "reference": "c3c16246f1f65e2bc42e449b09cc8e3820c09739",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-config/zipball/d39ba9fcf7557ac612c9a7e5723d08fb13e4a144",
+                "reference": "d39ba9fcf7557ac612c9a7e5723d08fb13e4a144",
                 "shasum": ""
             },
             "require": {
@@ -937,7 +943,6 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [],
                 "psr-4": {
                     "Swoft\\Config\\": "src/"
                 }
@@ -947,25 +952,26 @@
                 "Apache-2.0"
             ],
             "description": "swoft config component",
+            "homepage": "https://github.com/swoft-cloud/swoft-config",
             "keywords": [
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/connection-pool",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-connection-pool.git",
-                "reference": "f2b9de5c432348afea63db3f8d029f1946797ba4"
+                "reference": "4db53c70f912a23999decbb4eeea06b3988d8850"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-connection-pool/zipball/f2b9de5c432348afea63db3f8d029f1946797ba4",
-                "reference": "f2b9de5c432348afea63db3f8d029f1946797ba4",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-connection-pool/zipball/4db53c70f912a23999decbb4eeea06b3988d8850",
+                "reference": "4db53c70f912a23999decbb4eeea06b3988d8850",
                 "shasum": ""
             },
             "require": {
@@ -978,38 +984,39 @@
             "autoload": {
                 "psr-4": {
                     "Swoft\\Connection\\Pool\\": "src/"
-                },
-                "files": []
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
             "description": "swoft connection pool component",
+            "homepage": "https://github.com/swoft-cloud/swoft-connection-pool",
             "keywords": [
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/console",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-console.git",
-                "reference": "3dad111855281b0f051b6c742bf547b4b7ce9b00"
+                "reference": "31ee4cbf8feaf115c6e4773c97e6d74203d77895"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-console/zipball/3dad111855281b0f051b6c742bf547b4b7ce9b00",
-                "reference": "3dad111855281b0f051b6c742bf547b4b7ce9b00",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-console/zipball/31ee4cbf8feaf115c6e4773c97e6d74203d77895",
+                "reference": "31ee4cbf8feaf115c6e4773c97e6d74203d77895",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "php": ">7.1.0",
+                "swoft/stdlib": "~2.0.0",
                 "toolkit/cli-utils": "~1.0"
             },
             "require-dev": {
@@ -1029,27 +1036,28 @@
             "license": [
                 "Apache-2.0"
             ],
-            "description": "swoft connection pool component",
+            "description": "swoft command line application component",
+            "homepage": "https://github.com/swoft-cloud/swoft-console",
             "keywords": [
                 "console",
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T16:30:47+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/consul",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-consul.git",
-                "reference": "a9d0143c8f475f5637bc0ac707d2e22b1a08cf5d"
+                "reference": "f4b1f293aec6343743a833e8022b5273951349f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-consul/zipball/a9d0143c8f475f5637bc0ac707d2e22b1a08cf5d",
-                "reference": "a9d0143c8f475f5637bc0ac707d2e22b1a08cf5d",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-consul/zipball/f4b1f293aec6343743a833e8022b5273951349f5",
+                "reference": "f4b1f293aec6343743a833e8022b5273951349f5",
                 "shasum": ""
             },
             "require": {
@@ -1075,20 +1083,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:50:08+00:00"
+            "time": "2019-11-17T16:42:05+00:00"
         },
         {
             "name": "swoft/crontab",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-crontab.git",
-                "reference": "c6e764293227c0f7de209e1453c6f9add39c3fca"
+                "reference": "751a8fb1330202bd73d8f734963b67b846b57d78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-crontab/zipball/c6e764293227c0f7de209e1453c6f9add39c3fca",
-                "reference": "c6e764293227c0f7de209e1453c6f9add39c3fca",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-crontab/zipball/751a8fb1330202bd73d8f734963b67b846b57d78",
+                "reference": "751a8fb1330202bd73d8f734963b67b846b57d78",
                 "shasum": ""
             },
             "require": {
@@ -1118,20 +1126,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:50:08+00:00"
+            "time": "2019-11-17T16:42:05+00:00"
         },
         {
             "name": "swoft/db",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-db.git",
-                "reference": "706a59a3d835c56f43aee68dce6147a92defa3b1"
+                "reference": "bf7638e79389c734a9949db2db3b9fc261cf92ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-db/zipball/706a59a3d835c56f43aee68dce6147a92defa3b1",
-                "reference": "706a59a3d835c56f43aee68dce6147a92defa3b1",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-db/zipball/bf7638e79389c734a9949db2db3b9fc261cf92ff",
+                "reference": "bf7638e79389c734a9949db2db3b9fc261cf92ff",
                 "shasum": ""
             },
             "require": {
@@ -1145,16 +1153,14 @@
             "autoload": {
                 "psr-4": {
                     "Swoft\\Db\\": "src/"
-                },
-                "files": [
-                    "src/Helper/Functions.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
             "description": "swoft database component",
+            "homepage": "https://github.com/swoft-cloud/swoft-db",
             "keywords": [
                 "Active Record",
                 "db",
@@ -1163,20 +1169,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T17:25:45+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/devtool",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-devtool.git",
-                "reference": "a8baed8ca2c6c9d639f27311c51fb6ee7c2fb451"
+                "reference": "e4fa19b705ead1b9da6bf7c82e728217ce34b424"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-devtool/zipball/a8baed8ca2c6c9d639f27311c51fb6ee7c2fb451",
-                "reference": "a8baed8ca2c6c9d639f27311c51fb6ee7c2fb451",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-devtool/zipball/e4fa19b705ead1b9da6bf7c82e728217ce34b424",
+                "reference": "e4fa19b705ead1b9da6bf7c82e728217ce34b424",
                 "shasum": ""
             },
             "require": {
@@ -1203,20 +1209,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T16:31:04+00:00"
+            "time": "2019-11-17T16:42:05+00:00"
         },
         {
             "name": "swoft/error",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-error.git",
-                "reference": "543ad3e8137278855063ef7d96b55ea16c8bc2d5"
+                "reference": "3c05d6ee937d245a3c89e2d21b3877dddb499b94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-error/zipball/543ad3e8137278855063ef7d96b55ea16c8bc2d5",
-                "reference": "543ad3e8137278855063ef7d96b55ea16c8bc2d5",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-error/zipball/3c05d6ee937d245a3c89e2d21b3877dddb499b94",
+                "reference": "3c05d6ee937d245a3c89e2d21b3877dddb499b94",
                 "shasum": ""
             },
             "require": {
@@ -1237,6 +1243,7 @@
                 "Apache-2.0"
             ],
             "description": "swoft error handle component",
+            "homepage": "https://github.com/swoft-cloud/swoft-error",
             "keywords": [
                 "error-handler",
                 "exception",
@@ -1244,20 +1251,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/event",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-event.git",
-                "reference": "f1c0da256c5703d6826ba16f2804df8e3e85edf5"
+                "reference": "7485407bf0912007b43a1494f06145d4ee46a603"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-event/zipball/f1c0da256c5703d6826ba16f2804df8e3e85edf5",
-                "reference": "f1c0da256c5703d6826ba16f2804df8e3e85edf5",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-event/zipball/7485407bf0912007b43a1494f06145d4ee46a603",
+                "reference": "7485407bf0912007b43a1494f06145d4ee46a603",
                 "shasum": ""
             },
             "require": {
@@ -1278,26 +1285,29 @@
                 "Apache-2.0"
             ],
             "description": "swoft event dispatcher component",
+            "homepage": "https://github.com/swoft-cloud/swoft-event",
             "keywords": [
+                "event",
+                "event-dispatcher",
                 "php",
                 "psr-14",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/framework",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-framework.git",
-                "reference": "20f47876b37940ab9067ea2c2e71999e7ecf21ae"
+                "reference": "9fdc573a73138aa8ef70d2106eebc07cb28f009d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-framework/zipball/20f47876b37940ab9067ea2c2e71999e7ecf21ae",
-                "reference": "20f47876b37940ab9067ea2c2e71999e7ecf21ae",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-framework/zipball/9fdc573a73138aa8ef70d2106eebc07cb28f009d",
+                "reference": "9fdc573a73138aa8ef70d2106eebc07cb28f009d",
                 "shasum": ""
             },
             "require": {
@@ -1333,25 +1343,27 @@
                 "Apache-2.0"
             ],
             "description": "swoft framework component",
+            "homepage": "https://github.com/swoft-cloud/swoft-framework",
             "keywords": [
                 "php",
                 "swoft",
+                "swoft-framework",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/http-message",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-http-message.git",
-                "reference": "863df7ea5066c5eef5bc54fadfcb8dfb2260b33a"
+                "reference": "1dd6b260eaddbab35089f62afe579482b5f25364"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-http-message/zipball/863df7ea5066c5eef5bc54fadfcb8dfb2260b33a",
-                "reference": "863df7ea5066c5eef5bc54fadfcb8dfb2260b33a",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-http-message/zipball/1dd6b260eaddbab35089f62afe579482b5f25364",
+                "reference": "1dd6b260eaddbab35089f62afe579482b5f25364",
                 "shasum": ""
             },
             "require": {
@@ -1376,6 +1388,7 @@
                 "Apache-2.0"
             ],
             "description": "swoft http message component",
+            "homepage": "https://github.com/swoft-cloud/swoft-http-message",
             "keywords": [
                 "http-message",
                 "php",
@@ -1383,20 +1396,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/http-server",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-http-server.git",
-                "reference": "9ca8a83884659550f0e1aecdaa10deb024419d36"
+                "reference": "ef72f7dddba4d7c2654dbcac95591aa2a51c3455"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-http-server/zipball/9ca8a83884659550f0e1aecdaa10deb024419d36",
-                "reference": "9ca8a83884659550f0e1aecdaa10deb024419d36",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-http-server/zipball/ef72f7dddba4d7c2654dbcac95591aa2a51c3455",
+                "reference": "ef72f7dddba4d7c2654dbcac95591aa2a51c3455",
                 "shasum": ""
             },
             "require": {
@@ -1418,25 +1431,26 @@
                 "Apache-2.0"
             ],
             "description": "swoft http server component",
+            "homepage": "https://github.com/swoft-cloud/swoft-http-server",
             "keywords": [
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/i18n",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-i18n.git",
-                "reference": "e29f98c7245be9edcdb1888c1c47ffd953c55057"
+                "reference": "9f60a2daaa30f67af72654c00a22362284d94a92"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-i18n/zipball/e29f98c7245be9edcdb1888c1c47ffd953c55057",
-                "reference": "e29f98c7245be9edcdb1888c1c47ffd953c55057",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-i18n/zipball/9f60a2daaa30f67af72654c00a22362284d94a92",
+                "reference": "9f60a2daaa30f67af72654c00a22362284d94a92",
                 "shasum": ""
             },
             "require": {
@@ -1458,6 +1472,7 @@
                 "Apache-2.0"
             ],
             "description": "swoft i18n component",
+            "homepage": "https://github.com/swoft-cloud/swoft-i18n",
             "keywords": [
                 "i18n",
                 "php",
@@ -1465,20 +1480,20 @@
                 "swoole",
                 "translation"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/limiter",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-limiter.git",
-                "reference": "433616811d6bf6acb66ea9779f2d1cc70626abbb"
+                "reference": "86c4c534bedd24f95f4ca171b8f1f55cf7317ae0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-limiter/zipball/433616811d6bf6acb66ea9779f2d1cc70626abbb",
-                "reference": "433616811d6bf6acb66ea9779f2d1cc70626abbb",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-limiter/zipball/86c4c534bedd24f95f4ca171b8f1f55cf7317ae0",
+                "reference": "86c4c534bedd24f95f4ca171b8f1f55cf7317ae0",
                 "shasum": ""
             },
             "require": {
@@ -1505,20 +1520,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:50:08+00:00"
+            "time": "2019-11-17T16:42:05+00:00"
         },
         {
             "name": "swoft/log",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-log.git",
-                "reference": "55f4aa70fd571f8bbc11fb6e63b1aa032fdafb13"
+                "reference": "9e988d35e13e2858f6a811de92931c1e562d5ee4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-log/zipball/55f4aa70fd571f8bbc11fb6e63b1aa032fdafb13",
-                "reference": "55f4aa70fd571f8bbc11fb6e63b1aa032fdafb13",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-log/zipball/9e988d35e13e2858f6a811de92931c1e562d5ee4",
+                "reference": "9e988d35e13e2858f6a811de92931c1e562d5ee4",
                 "shasum": ""
             },
             "require": {
@@ -1543,25 +1558,29 @@
                 "Apache-2.0"
             ],
             "description": "swoft log component",
+            "homepage": "https://github.com/swoft-cloud/swoft-log",
             "keywords": [
+                "log",
+                "monolog",
                 "php",
                 "swoft",
+                "swoft-log",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/process",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-process.git",
-                "reference": "0a277fd29572fbeb62d1a98889833ae612a8d83c"
+                "reference": "435788147eb2047d633f2f2b786631ad565872fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-process/zipball/0a277fd29572fbeb62d1a98889833ae612a8d83c",
-                "reference": "0a277fd29572fbeb62d1a98889833ae612a8d83c",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-process/zipball/435788147eb2047d633f2f2b786631ad565872fe",
+                "reference": "435788147eb2047d633f2f2b786631ad565872fe",
                 "shasum": ""
             },
             "require": {
@@ -1582,26 +1601,27 @@
                 "Apache-2.0"
             ],
             "description": "Process Component for Swoft",
+            "homepage": "https://github.com/swoft-cloud/swoft-process",
             "keywords": [
                 "php",
                 "process",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/proxy",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-proxy.git",
-                "reference": "0d14da65c45764e59cc5c0a319be7f44374f1982"
+                "reference": "3b99e53e71128aad544b53ee9173b0b95529dfe3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-proxy/zipball/0d14da65c45764e59cc5c0a319be7f44374f1982",
-                "reference": "0d14da65c45764e59cc5c0a319be7f44374f1982",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-proxy/zipball/3b99e53e71128aad544b53ee9173b0b95529dfe3",
+                "reference": "3b99e53e71128aad544b53ee9173b0b95529dfe3",
                 "shasum": ""
             },
             "require": {
@@ -1622,26 +1642,27 @@
                 "Apache-2.0"
             ],
             "description": "swoft proxy component",
+            "homepage": "https://github.com/swoft-cloud/swoft-proxy",
             "keywords": [
                 "php",
                 "rpc",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/redis",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-redis.git",
-                "reference": "9690399faba58bf749e41fbceb3233e5e25d0643"
+                "reference": "9ec2b219e0585b988bb3d68c9ac482b67cdc4f5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-redis/zipball/9690399faba58bf749e41fbceb3233e5e25d0643",
-                "reference": "9690399faba58bf749e41fbceb3233e5e25d0643",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-redis/zipball/9ec2b219e0585b988bb3d68c9ac482b67cdc4f5e",
+                "reference": "9ec2b219e0585b988bb3d68c9ac482b67cdc4f5e",
                 "shasum": ""
             },
             "require": {
@@ -1664,26 +1685,29 @@
                 "Apache-2.0"
             ],
             "description": "swoft redis component",
+            "homepage": "https://github.com/swoft-cloud/swoft-redis",
             "keywords": [
                 "php",
                 "redis",
+                "redis-cluster",
+                "redis-pool",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/rpc",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-rpc.git",
-                "reference": "970317e73ff73c5d5bdd75a029911bc9dc33f4c2"
+                "reference": "45b1d399ea58f1ad309c503ebe7dfa3a2c6c3165"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-rpc/zipball/970317e73ff73c5d5bdd75a029911bc9dc33f4c2",
-                "reference": "970317e73ff73c5d5bdd75a029911bc9dc33f4c2",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-rpc/zipball/45b1d399ea58f1ad309c503ebe7dfa3a2c6c3165",
+                "reference": "45b1d399ea58f1ad309c503ebe7dfa3a2c6c3165",
                 "shasum": ""
             },
             "require": {
@@ -1696,34 +1720,34 @@
             "autoload": {
                 "psr-4": {
                     "Swoft\\Rpc\\": "src/"
-                },
-                "files": []
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
             "description": "swoft rpc protocol component",
+            "homepage": "https://github.com/swoft-cloud/swoft-rpc",
             "keywords": [
                 "php",
                 "rpc",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/rpc-client",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-rpc-client.git",
-                "reference": "4450e5ce953c99b2d03a1115346ca78f583741b9"
+                "reference": "7de59cb959fa4dff8f84ada3fa19a542e1680df3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-rpc-client/zipball/4450e5ce953c99b2d03a1115346ca78f583741b9",
-                "reference": "4450e5ce953c99b2d03a1115346ca78f583741b9",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-rpc-client/zipball/7de59cb959fa4dff8f84ada3fa19a542e1680df3",
+                "reference": "7de59cb959fa4dff8f84ada3fa19a542e1680df3",
                 "shasum": ""
             },
             "require": {
@@ -1745,26 +1769,27 @@
                 "Apache-2.0"
             ],
             "description": "swoft rpc client component",
+            "homepage": "https://github.com/swoft-cloud/swoft-rpc-client",
             "keywords": [
                 "php",
                 "rpc",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-18T03:06:00+00:00"
         },
         {
             "name": "swoft/rpc-server",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-rpc-server.git",
-                "reference": "37bb8edc07785cdad9f1ca6f661924c2f0bab91c"
+                "reference": "b3b15631aed359abd623f67648901bbeea5b4fb6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-rpc-server/zipball/37bb8edc07785cdad9f1ca6f661924c2f0bab91c",
-                "reference": "37bb8edc07785cdad9f1ca6f661924c2f0bab91c",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-rpc-server/zipball/b3b15631aed359abd623f67648901bbeea5b4fb6",
+                "reference": "b3b15631aed359abd623f67648901bbeea5b4fb6",
                 "shasum": ""
             },
             "require": {
@@ -1786,26 +1811,27 @@
                 "Apache-2.0"
             ],
             "description": "swoft rpc server component",
+            "homepage": "https://github.com/swoft-cloud/swoft-rpc-server",
             "keywords": [
                 "php",
                 "rpc",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/server",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-server.git",
-                "reference": "0062de6d161235616da92bd50ef68e9fb9508d8c"
+                "reference": "5ec058ab8fdd8214ce69018c57dcbaab4c0ba8e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-server/zipball/0062de6d161235616da92bd50ef68e9fb9508d8c",
-                "reference": "0062de6d161235616da92bd50ef68e9fb9508d8c",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-server/zipball/5ec058ab8fdd8214ce69018c57dcbaab4c0ba8e7",
+                "reference": "5ec058ab8fdd8214ce69018c57dcbaab4c0ba8e7",
                 "shasum": ""
             },
             "require": {
@@ -1825,25 +1851,26 @@
                 "Apache-2.0"
             ],
             "description": "swoft base server component",
+            "homepage": "https://github.com/swoft-cloud/swoft-server",
             "keywords": [
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/stdlib",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-stdlib.git",
-                "reference": "75c1917ec97253c46f0d533b94534eff2c3b6bcb"
+                "reference": "e90746a9dd0220c770cc63fb51b3341eb9ac074b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-stdlib/zipball/75c1917ec97253c46f0d533b94534eff2c3b6bcb",
-                "reference": "75c1917ec97253c46f0d533b94534eff2c3b6bcb",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-stdlib/zipball/e90746a9dd0220c770cc63fb51b3341eb9ac074b",
+                "reference": "e90746a9dd0220c770cc63fb51b3341eb9ac074b",
                 "shasum": ""
             },
             "require": {
@@ -1872,20 +1899,20 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/task",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-task.git",
-                "reference": "83a611edd01fee0926fe49d76623e85f2e2d6e6d"
+                "reference": "b824e0c6350ae5d13160a5ba225ff1ac8fd96da2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-task/zipball/83a611edd01fee0926fe49d76623e85f2e2d6e6d",
-                "reference": "83a611edd01fee0926fe49d76623e85f2e2d6e6d",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-task/zipball/b824e0c6350ae5d13160a5ba225ff1ac8fd96da2",
+                "reference": "b824e0c6350ae5d13160a5ba225ff1ac8fd96da2",
                 "shasum": ""
             },
             "require": {
@@ -1913,20 +1940,20 @@
                 "swoole",
                 "task"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/tcp",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-tcp.git",
-                "reference": "491d73e973676ac94f028ccd41cf67f9d94ca4f6"
+                "reference": "0b8e9a817b8f162a5c2650a8e8c5a7dc8ff14281"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-tcp/zipball/491d73e973676ac94f028ccd41cf67f9d94ca4f6",
-                "reference": "491d73e973676ac94f028ccd41cf67f9d94ca4f6",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-tcp/zipball/0b8e9a817b8f162a5c2650a8e8c5a7dc8ff14281",
+                "reference": "0b8e9a817b8f162a5c2650a8e8c5a7dc8ff14281",
                 "shasum": ""
             },
             "require": {
@@ -1947,6 +1974,7 @@
                 "Apache-2.0"
             ],
             "description": "Swoft tcp protocol component",
+            "homepage": "https://github.com/swoft-cloud/swoft-tcp",
             "keywords": [
                 "php",
                 "protocol",
@@ -1954,26 +1982,29 @@
                 "swoole",
                 "tcp"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/tcp-server",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-tcp-server.git",
-                "reference": "a4a68c534d85f515d62f4b817d77714b08286168"
+                "reference": "72ef107e314f02e35a52481f4975d43ce6d06c82"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-tcp-server/zipball/a4a68c534d85f515d62f4b817d77714b08286168",
-                "reference": "a4a68c534d85f515d62f4b817d77714b08286168",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-tcp-server/zipball/72ef107e314f02e35a52481f4975d43ce6d06c82",
+                "reference": "72ef107e314f02e35a52481f4975d43ce6d06c82",
                 "shasum": ""
             },
             "require": {
                 "php": ">7.1",
                 "swoft/framework": "~2.0.0",
                 "swoft/tcp": "~2.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.5"
             },
             "type": "library",
             "autoload": {
@@ -1986,25 +2017,26 @@
                 "Apache-2.0"
             ],
             "description": "swoft tcp server component",
+            "homepage": "https://github.com/swoft-cloud/swoft-tcp-server",
             "keywords": [
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/validator",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-validator.git",
-                "reference": "5deb7d997851637b9619a82a05d5b3b1ce89b38c"
+                "reference": "8d23b4998b02a1c29227f3d6677aceb629963be9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-validator/zipball/5deb7d997851637b9619a82a05d5b3b1ce89b38c",
-                "reference": "5deb7d997851637b9619a82a05d5b3b1ce89b38c",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-validator/zipball/8d23b4998b02a1c29227f3d6677aceb629963be9",
+                "reference": "8d23b4998b02a1c29227f3d6677aceb629963be9",
                 "shasum": ""
             },
             "require": {
@@ -2016,36 +2048,35 @@
             },
             "type": "library",
             "autoload": {
-                "classmap": [],
                 "psr-4": {
                     "Swoft\\Validator\\": "src/"
-                },
-                "files": []
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
             "description": "Validator component for swoft",
+            "homepage": "https://github.com/swoft-cloud/swoft-validator",
             "keywords": [
                 "php",
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-20T15:25:00+00:00"
+            "time": "2019-11-17T16:38:19+00:00"
         },
         {
             "name": "swoft/view",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-view.git",
-                "reference": "e37a691004ac721a8c96de0c1dba8646deee0447"
+                "reference": "bafe1e4ec2da0632f1871373b611cb6a1ea9e631"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-view/zipball/e37a691004ac721a8c96de0c1dba8646deee0447",
-                "reference": "e37a691004ac721a8c96de0c1dba8646deee0447",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-view/zipball/bafe1e4ec2da0632f1871373b611cb6a1ea9e631",
+                "reference": "bafe1e4ec2da0632f1871373b611cb6a1ea9e631",
                 "shasum": ""
             },
             "require": {
@@ -2074,20 +2105,20 @@
                 "swoole",
                 "view"
             ],
-            "time": "2019-09-20T15:50:39+00:00"
+            "time": "2019-11-17T16:42:05+00:00"
         },
         {
             "name": "swoft/websocket-server",
-            "version": "v2.0.6",
+            "version": "v2.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoft-websocket-server.git",
-                "reference": "413ae43db21e6dd432625bb5c525b791e41e2d50"
+                "reference": "d09dc8e228cdfef0a7567a7b252d1e187f9903fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoft-websocket-server/zipball/413ae43db21e6dd432625bb5c525b791e41e2d50",
-                "reference": "413ae43db21e6dd432625bb5c525b791e41e2d50",
+                "url": "https://api.github.com/repos/swoft-cloud/swoft-websocket-server/zipball/d09dc8e228cdfef0a7567a7b252d1e187f9903fb",
+                "reference": "d09dc8e228cdfef0a7567a7b252d1e187f9903fb",
                 "shasum": ""
             },
             "require": {
@@ -2107,6 +2138,7 @@
                 "Apache-2.0"
             ],
             "description": "swoft websocket server component",
+            "homepage": "https://github.com/swoft-cloud/swoft-websocket-server",
             "keywords": [
                 "php",
                 "swoft",
@@ -2114,34 +2146,35 @@
                 "websocket",
                 "websocket-server"
             ],
-            "time": "2019-09-21T08:04:11+00:00"
+            "time": "2019-11-18T03:54:16+00:00"
         },
         {
             "name": "symfony/cache",
-            "version": "v4.3.4",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "1d8f7fee990c586f275cde1a9fc883d6b1e2d43e"
+                "reference": "32bd1f9be1684bba768a6834037706cf0950843c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/1d8f7fee990c586f275cde1a9fc883d6b1e2d43e",
-                "reference": "1d8f7fee990c586f275cde1a9fc883d6b1e2d43e",
+                "url": "https://api.github.com/repos/symfony/cache/zipball/32bd1f9be1684bba768a6834037706cf0950843c",
+                "reference": "32bd1f9be1684bba768a6834037706cf0950843c",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
+                "php": "^7.2.5",
                 "psr/cache": "~1.0",
                 "psr/log": "~1.0",
-                "symfony/cache-contracts": "^1.1",
-                "symfony/service-contracts": "^1.1",
-                "symfony/var-exporter": "^4.2"
+                "symfony/cache-contracts": "^1.1.7|^2",
+                "symfony/service-contracts": "^1.1|^2",
+                "symfony/var-exporter": "^4.4|^5.0"
             },
             "conflict": {
                 "doctrine/dbal": "<2.5",
-                "symfony/dependency-injection": "<3.4",
-                "symfony/var-dumper": "<3.4"
+                "symfony/dependency-injection": "<4.4",
+                "symfony/http-kernel": "<4.4",
+                "symfony/var-dumper": "<4.4"
             },
             "provide": {
                 "psr/cache-implementation": "1.0",
@@ -2154,14 +2187,14 @@
                 "doctrine/dbal": "~2.5",
                 "predis/predis": "~1.1",
                 "psr/simple-cache": "^1.0",
-                "symfony/config": "~4.2",
-                "symfony/dependency-injection": "~3.4|~4.1",
-                "symfony/var-dumper": "^4.1.1"
+                "symfony/config": "^4.4|^5.0",
+                "symfony/dependency-injection": "^4.4|^5.0",
+                "symfony/var-dumper": "^4.4|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -2192,24 +2225,24 @@
                 "caching",
                 "psr6"
             ],
-            "time": "2019-08-26T08:26:39+00:00"
+            "time": "2019-11-18T17:27:11+00:00"
         },
         {
             "name": "symfony/cache-contracts",
-            "version": "v1.1.5",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache-contracts.git",
-                "reference": "ec5524b669744b5f1dc9c66d3c2b091eb7e7f0db"
+                "reference": "a91281de82119a7a07481b892f709d88da592cd3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/ec5524b669744b5f1dc9c66d3c2b091eb7e7f0db",
-                "reference": "ec5524b669744b5f1dc9c66d3c2b091eb7e7f0db",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/a91281de82119a7a07481b892f709d88da592cd3",
+                "reference": "a91281de82119a7a07481b892f709d88da592cd3",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
+                "php": "^7.2.9",
                 "psr/cache": "^1.0"
             },
             "suggest": {
@@ -2218,7 +2251,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -2250,31 +2283,31 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-06-13T11:15:36+00:00"
+            "time": "2019-11-09T09:18:34+00:00"
         },
         {
             "name": "symfony/expression-language",
-            "version": "v4.3.4",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/expression-language.git",
-                "reference": "c8b47d8820d3bf75f757eec8a2647584c14cf0c6"
+                "reference": "8a1028a65623a8f7bba582b60e4fd308e6f43001"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/expression-language/zipball/c8b47d8820d3bf75f757eec8a2647584c14cf0c6",
-                "reference": "c8b47d8820d3bf75f757eec8a2647584c14cf0c6",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/8a1028a65623a8f7bba582b60e4fd308e6f43001",
+                "reference": "8a1028a65623a8f7bba582b60e4fd308e6f43001",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3",
-                "symfony/cache": "~3.4|~4.0",
-                "symfony/service-contracts": "^1.1"
+                "symfony/cache": "^3.4|^4.0|^5.0",
+                "symfony/service-contracts": "^1.1|^2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -2301,7 +2334,7 @@
             ],
             "description": "Symfony ExpressionLanguage Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-08T09:29:19+00:00"
+            "time": "2019-11-12T14:53:53+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2363,20 +2396,20 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v1.1.6",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3"
+                "reference": "9d99e1556417bf227a62e14856d630672bf10eaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
-                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/9d99e1556417bf227a62e14856d630672bf10eaf",
+                "reference": "9d99e1556417bf227a62e14856d630672bf10eaf",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3",
+                "php": "^7.2.9",
                 "psr/container": "^1.0"
             },
             "suggest": {
@@ -2385,7 +2418,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "2.0-dev"
                 }
             },
             "autoload": {
@@ -2417,32 +2450,32 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-08-20T14:44:19+00:00"
+            "time": "2019-11-09T09:18:34+00:00"
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v4.3.4",
+            "version": "v5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "d5b4e2d334c1d80e42876c7d489896cfd37562f2"
+                "reference": "e2f1eeb12edacf744c4b359a859204578fdf8549"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/d5b4e2d334c1d80e42876c7d489896cfd37562f2",
-                "reference": "d5b4e2d334c1d80e42876c7d489896cfd37562f2",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/e2f1eeb12edacf744c4b359a859204578fdf8549",
+                "reference": "e2f1eeb12edacf744c4b359a859204578fdf8549",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1.3"
+                "php": "^7.2.5"
             },
             "require-dev": {
-                "symfony/var-dumper": "^4.1.1"
+                "symfony/var-dumper": "^4.4|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "5.0-dev"
                 }
             },
             "autoload": {
@@ -2477,20 +2510,20 @@
                 "instantiate",
                 "serialize"
             ],
-            "time": "2019-08-22T07:33:08+00:00"
+            "time": "2019-11-18T17:27:11+00:00"
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.3.4",
+            "version": "v4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "5a0b7c32dc3ec56fd4abae8a4a71b0cf05013686"
+                "reference": "76de473358fe802578a415d5bb43c296cf09d211"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/5a0b7c32dc3ec56fd4abae8a4a71b0cf05013686",
-                "reference": "5a0b7c32dc3ec56fd4abae8a4a71b0cf05013686",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/76de473358fe802578a415d5bb43c296cf09d211",
+                "reference": "76de473358fe802578a415d5bb43c296cf09d211",
                 "shasum": ""
             },
             "require": {
@@ -2501,7 +2534,7 @@
                 "symfony/console": "<3.4"
             },
             "require-dev": {
-                "symfony/console": "~3.4|~4.0"
+                "symfony/console": "^3.4|^4.0|^5.0"
             },
             "suggest": {
                 "symfony/console": "For validating YAML files using the lint command"
@@ -2509,7 +2542,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -2536,7 +2569,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-20T14:27:59+00:00"
+            "time": "2019-11-12T14:51:11+00:00"
         },
         {
             "name": "text/template",
@@ -2701,16 +2734,16 @@
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "a2c590166b2133a4633738648b6b064edae0814a"
+                "reference": "ae466f726242e637cebdd526a7d991b9433bacf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/a2c590166b2133a4633738648b6b064edae0814a",
-                "reference": "a2c590166b2133a4633738648b6b064edae0814a",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/ae466f726242e637cebdd526a7d991b9433bacf1",
+                "reference": "ae466f726242e637cebdd526a7d991b9433bacf1",
                 "shasum": ""
             },
             "require": {
@@ -2753,7 +2786,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2019-03-17T17:37:11+00:00"
+            "time": "2019-10-21T16:45:58+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -3057,22 +3090,22 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.8.1",
+            "version": "1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76"
+                "reference": "f6811d96d97bdf400077a0cc100ae56aa32b9203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
-                "reference": "1927e75f4ed19131ec9bcc3b002e07fb1173ee76",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/f6811d96d97bdf400077a0cc100ae56aa32b9203",
+                "reference": "f6811d96d97bdf400077a0cc100ae56aa32b9203",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
-                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
+                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0|^5.0",
                 "sebastian/comparator": "^1.1|^2.0|^3.0",
                 "sebastian/recursion-context": "^1.0|^2.0|^3.0"
             },
@@ -3116,7 +3149,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2019-06-13T12:50:23+00:00"
+            "time": "2019-10-03T11:07:50+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -3372,16 +3405,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.16",
+            "version": "7.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "316afa6888d2562e04aeb67ea7f2017a0eb41661"
+                "reference": "4c92a15296e58191a4cd74cff3b34fc8e374174a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/316afa6888d2562e04aeb67ea7f2017a0eb41661",
-                "reference": "316afa6888d2562e04aeb67ea7f2017a0eb41661",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4c92a15296e58191a4cd74cff3b34fc8e374174a",
+                "reference": "4c92a15296e58191a4cd74cff3b34fc8e374174a",
                 "shasum": ""
             },
             "require": {
@@ -3452,7 +3485,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-09-14T09:08:39+00:00"
+            "time": "2019-10-28T10:37:36+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -3621,16 +3654,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "4.2.2",
+            "version": "4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "f2a2c8e1c97c11ace607a7a667d73d47c19fe404"
+                "reference": "464c90d7bdf5ad4e8a6aea15c091fec0603d4368"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/f2a2c8e1c97c11ace607a7a667d73d47c19fe404",
-                "reference": "f2a2c8e1c97c11ace607a7a667d73d47c19fe404",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/464c90d7bdf5ad4e8a6aea15c091fec0603d4368",
+                "reference": "464c90d7bdf5ad4e8a6aea15c091fec0603d4368",
                 "shasum": ""
             },
             "require": {
@@ -3670,7 +3703,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2019-05-05T09:05:15+00:00"
+            "time": "2019-11-20T08:46:58+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -4026,13 +4059,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swoft-cloud/swoole-ide-helper.git",
-                "reference": "febf5e2845a060e1c42969cdd892f8353797d37b"
+                "reference": "470f15208ddf50b2fe04a2b502fd8bf16a498c3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swoft-cloud/swoole-ide-helper/zipball/febf5e2845a060e1c42969cdd892f8353797d37b",
-                "reference": "febf5e2845a060e1c42969cdd892f8353797d37b",
+                "url": "https://api.github.com/repos/swoft-cloud/swoole-ide-helper/zipball/470f15208ddf50b2fe04a2b502fd8bf16a498c3a",
+                "reference": "470f15208ddf50b2fe04a2b502fd8bf16a498c3a",
                 "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.1"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -4046,7 +4083,7 @@
                 "swoft",
                 "swoole"
             ],
-            "time": "2019-09-21T16:15:33+00:00"
+            "time": "2019-11-21T02:34:24+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -4090,31 +4127,29 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "88e6d84706d09a236046d686bbea96f07b3a34f4"
+                "reference": "573381c0a64f155a0d9a23f4b0c797194805b925"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/88e6d84706d09a236046d686bbea96f07b3a34f4",
-                "reference": "88e6d84706d09a236046d686bbea96f07b3a34f4",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/573381c0a64f155a0d9a23f4b0c797194805b925",
+                "reference": "573381c0a64f155a0d9a23f4b0c797194805b925",
                 "shasum": ""
             },
             "require": {
                 "php": "^5.3.3 || ^7.0",
                 "symfony/polyfill-ctype": "^1.8"
             },
+            "conflict": {
+                "vimeo/psalm": "<3.6.0"
+            },
             "require-dev": {
                 "phpunit/phpunit": "^4.8.36 || ^7.5.13"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev"
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "Webmozart\\Assert\\": "src/"
@@ -4136,7 +4171,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2019-08-24T08:43:50+00:00"
+            "time": "2019-11-24T13:36:37+00:00"
         }
     ],
     "aliases": [],
@@ -4154,7 +4189,8 @@
         "ext-simplexml": "*",
         "ext-libxml": "*",
         "ext-mbstring": "*",
-        "ext-openssl": "*"
+        "ext-openssl": "*",
+        "ext-sockets": "*"
     },
     "platform-dev": []
 }

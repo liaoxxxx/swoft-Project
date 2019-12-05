@@ -67,7 +67,7 @@ return [
     ],
     'db'                => [
         'class'    => Database::class,
-        'dsn'      => 'mysql:dbname=swoft;host=127.0.0.1',
+        'dsn'      => 'mysql:dbname=swoftmy;host=127.0.0.1',
         'username' => 'root',
         'password' => 'liao993501756',
     ],

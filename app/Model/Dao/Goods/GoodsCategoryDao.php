@@ -4,34 +4,39 @@
 namespace App\Model\Dao\Goods;
 
 
-use App\Model\Entity\Admin;
+use App\Model\Entity\GoodsCategory;
 use Swoft\Bean\Exception\ContainerException;
 use Swoft\Db\Eloquent\Collection;
 use Swoft\Db\Exception\DbException;
 
 class GoodsCategoryDao
 {
+    private static array $map=['status'=>1];
+
     /**
-     * @param string $userName
-     * @return Admin
-     * @throws DbException
+     * @param GoodsCategory $goodsCategory
+     * @return bool
      */
-    public static function save(string $userName): Admin
-    {
-        $admin=new Admin();
+    public static function save(GoodsCategory $goodsCategory):bool{
         try {
-            $admin= Admin::where('username', $userName)->firstOr( );
-        }
-        catch (\ReflectionException $e) {
+            return $goodsCategory->save();
+        } catch (\ReflectionException $e) {
+            //var_dump($e);
+        } catch (ContainerException $e) {
+            //var_dump($e);
+        } catch (DbException $e) {
             //var_dump($e);
         }
-        catch (ContainerException $e) {
-            //var_dump($e);
-        }
-        catch (DbException $e) {
-            //var_dump($e);
-        }
-        //var_dump($admin);
-        return  $admin;
+        return  false;
     }
+
+    public static function findOne(int $id  ):GoodsCategory
+    {
+        return  GoodsCategory::where(self::$map)->find($id);
+    }
+
+    public static function edit(){
+
+    }
+
 }

@@ -7,11 +7,8 @@ class SqlTimeTool{
      * @return int
      */
     public static function getMicroTime():int {
-        return microtime();
+        return   intval( microtime(true)*1000);
     }
-
-
-
 
 
 

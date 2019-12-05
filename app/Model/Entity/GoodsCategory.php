@@ -3,6 +3,7 @@
 
 namespace App\Model\Entity;
 
+use phpDocumentor\Reflection\Types\Integer;
 use Swoft\Db\Annotation\Mapping\Column;
 use Swoft\Db\Annotation\Mapping\Entity;
 use Swoft\Db\Annotation\Mapping\Id;
@@ -15,14 +16,14 @@ use Swoft\Db\Eloquent\Model;
  *
  * @since 2.0
  *
- * @Entity(table="admin")
+ * @Entity(table="goods_category")
  */
 class GoodsCategory extends Model
 {
     /**
      *
      * @Id()
-     * @Column()
+     * @Column(name="id")
      * @var int|null
      */
     private $id;
@@ -30,7 +31,7 @@ class GoodsCategory extends Model
     /**
      *
      *
-     * @Column()
+     * @Column(name="cate_name")
      * @var string
      */
     private $cateName;
@@ -38,7 +39,7 @@ class GoodsCategory extends Model
     /**
      *
      *
-     * @Column()
+     * @Column(name="created_at")
      * @var int
      */
     private $createdAt;
@@ -47,7 +48,7 @@ class GoodsCategory extends Model
     /**
      *
      *
-     * @Column(hidden=true)
+     * @Column(name="parent_id")
      * @var int
      */
     private $parentId ;
@@ -71,7 +72,7 @@ class GoodsCategory extends Model
     /**
      *
      *
-     * @Column()
+     * @Column(name="is_delete")
      * @var int|null
      */
     private $isDelete;
@@ -81,7 +82,7 @@ class GoodsCategory extends Model
     /**
      *
      *
-     * @Column()
+     * @Column(name="updated_at")
      * @var int|null
      */
     private $updatedAt;
@@ -201,9 +202,9 @@ class GoodsCategory extends Model
     }
 
     /**
-     * @param string $parentId
+     * @param int $parentId
      */
-    public function setParentId(string $parentId): void
+    public function setParentId(int $parentId): void
     {
         $this->parentId = $parentId;
     }
