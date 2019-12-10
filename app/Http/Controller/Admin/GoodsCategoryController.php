@@ -118,17 +118,25 @@ class GoodsCategoryController extends BaseController
     }
 
 
-
     /**
      * @RequestMapping(route="edit_category")
      * @param Request $request
      * @param Response $response
      * @return Response
+     * @throws ContainerException
+     * @throws ReflectionException
+     * @throws Swoft\Db\Exception\DbException
      */
     public function editCategory(Request $request,Response $response): Response
     {
         $post=$request->post();
-        $response->withData(JsonResponse::Success("错误的商品分类id",[]));
+        //编辑
+        $res= (new \App\Model\Logic\GoodsCategoryLogic)->edit($post);
+        if ($res){
+            return $response->withData(JsonResponse::Success("修改分类id{$post['id']}  成功",$post));
+        }
+        return $response->withData(JsonResponse::Error("修改失败",$post));
+
     }
 
 

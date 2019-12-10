@@ -8,11 +8,13 @@ use App\Model\Dao\Admin\AdminCacheStrategy;
 use App\Model\Dao\Goods\GoodsCategoryDao;
 use App\Model\Entity\Admin;
 use App\Model\Entity\GoodsCategory;
+use ReflectionException;
+use Swoft\Bean\Exception\ContainerException;
 use Swoft\Db\Eloquent\Collection;
 use Swoft\Db\Exception\DbException;
 use Swoft\Http\Message\Request;
 use App\Helper\SqlTimeTool;
-
+use App\Exception\Handler\HttpExceptionHandler;
 
 class GoodsCategoryLogic
 {
@@ -69,9 +71,26 @@ class GoodsCategoryLogic
     /**
      * 生成缓存的key
      * @param array $post
-     * @return string
+     * @return bool
+     * @throws DbException
+     * @throws ReflectionException
+     * @throws ContainerException
      */
-    public static function edit(array $post):string {
+    public  function edit(array $post ):bool {
+      $Category = $this->editBuild($post);
+      return $Category->save();
+    }
+
+
+    public  function editBuild(array $post):GoodsCategory {
+        $cateGoryItem= GoodsCategoryDao::findOne( $post['id']);
+
+        $cateGoryItem->setCateName($post['cateName']);
+        $cateGoryItem->setSummary($post['summary']);
+        $cateGoryItem->setParentId($post['parentId']);
+        $cateGoryItem->setStatus($post['status']);
+        $cateGoryItem->setUpdatedAt(SqlTimeTool::getMicroTime());
+        return $cateGoryItem;
     }
 
 
