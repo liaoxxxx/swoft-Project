@@ -30,9 +30,13 @@ class GoodsCategoryDao
         return  false;
     }
 
-    public static function findOne(int $id  ):GoodsCategory
+    public static function findOne(int $id  )
     {
-        return  GoodsCategory::where(self::$map)->find($id);
+        try {
+            return GoodsCategory::where(self::$map)->find($id);
+        } catch (DbException $e) {
+            return new GoodsCategory();
+        }
     }
 
     public static function edit(){

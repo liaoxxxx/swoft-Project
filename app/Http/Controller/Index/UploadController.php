@@ -4,9 +4,12 @@ namespace App\Http\Controller\Index;
 
 
 
+use App\Helper\AppProperty;
+use App\Helper\FileOperator;
 use App\Helper\HttpHeader;
 use App\Helper\JsonResponse;
 use App\Model\Logic\GoodsCategoryLogic;
+use App\Model\Logic\UploadLogic;
 use ReflectionException;
 use Swoft;
 use Swoft\Http\Server\Annotation\Mapping\Controller;
@@ -37,10 +40,14 @@ class UploadController
         $file = $request->getUploadedFiles();
         $file=$file["file"];
 
-        var_dump($file->getSize());
-        var_dump($path = \Swoft::getAlias('@app'));
-//        $file['']
-
+        if( UploadLogic::checkFileType(FileOperator::getFileSuffixName($file->getClientFilename()),"IMAGE_TYPE")){
+            echo 888;
+        }
+        else{
+            echo "error";
+        }
+        $newFileName=time().mt_rand(100,999).".".FileOperator::getFileSuffixName($file->getClientFilename());;
+        $file->moveTo(FileOperator::getImageBasePath().$newFileName);
     }
 
 
