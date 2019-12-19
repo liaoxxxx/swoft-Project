@@ -19,7 +19,6 @@ use Swoft\Http\Message\Response;
 use Swoft\Http\Message\Request;
 use Swoft\Http\Message\Upload\UploadedFile;
 
-
 /**
  * Class UploadController
  * @Controller(prefix="upload")
@@ -34,24 +33,18 @@ class UploadController
      * @param Request $request
      * @param Response $response
      *
+     * @return Response
      */
-    public function login(Request $request,Response $response)//: Response
+    public function singleImage(Request $request,Response $response)//: Response
     {
         $file = $request->getUploadedFiles();
         $file=$file["file"];
+        $resArr= UploadLogic::handleSingleImage($file);
+        if ($resArr['status']){
+            return  $response->withData(JsonResponse::Success($resArr['msg'],$resArr['data']));
+        }else{
+            return  $response->withData(JsonResponse::Error($resArr['msg'],$resArr['data']));
+        }
 
-        if( UploadLogic::checkFileType(FileOperator::getFileSuffixName($file->getClientFilename()),"IMAGE_TYPE")){
-            echo 888;
-        }
-        else{
-            echo "error";
-        }
-        $newFileName=time().mt_rand(100,999).".".FileOperator::getFileSuffixName($file->getClientFilename());;
-        $file->moveTo(FileOperator::getImageBasePath().$newFileName);
     }
-
-
-
-
-
 }
