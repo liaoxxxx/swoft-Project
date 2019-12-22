@@ -64,8 +64,8 @@ class UploadLogic{
             return ["status"=>0,'msg'=>"文件类型不符合要求"];
         }
 
-        $newFileName=time().mt_rand(100,999).".". (new \App\Helper\FileOperator)->getFileSuffixName($file->getClientFilename());
-        $file->moveTo((new FileOperator)->getImageBasePath().$newFileName);
+        $newFileName=(new FileOperator)->getImageBasePath().time().mt_rand(100,999).".". (new \App\Helper\FileOperator)->getFileSuffixName($file->getClientFilename());
+        $file->moveTo($newFileName);
 
         self::save2DB($newFileName);
 

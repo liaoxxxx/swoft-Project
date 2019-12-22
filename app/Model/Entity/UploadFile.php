@@ -16,7 +16,7 @@ use Swoft\Db\Eloquent\Model;
  *
  * @since 2.0
  *
- * @Entity(table="goods_category")
+ * @Entity(table="upload_file")
  */
 class UploadFile extends Model
 {
@@ -26,7 +26,7 @@ class UploadFile extends Model
      * @Column(name="id")
      * @var int|null
      */
-    private $id;
+    private  $id;
 
 
     /**
