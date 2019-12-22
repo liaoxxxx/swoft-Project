@@ -37,7 +37,7 @@ class DefaultHttpMiddleware implements MiddlewareInterface
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
         if ('OPTIONS' === $request->getMethod()) {
-            file_put_contents("/www/wwwroot/swoft-my/liao.log",print_r(['method'=>'option'],true),FILE_APPEND);
+            //file_put_contents("/www/wwwroot/swoft-my/liao.log",print_r(['method'=>'option'],true),FILE_APPEND);
             $response = Context::mustGet()->getResponse();
             return $this->configResponse($response);
         }
