@@ -1,22 +1,21 @@
 <?php
 
 
-namespace App\Helper;
+namespace App\Helper\Response;
 
 
-use phpDocumentor\Reflection\Types\Mixed_;
 
 class JsonResponse
 {
     /**
      * @var array
      */
-    private  static $message=[
-        'msg'=>"",
-        'success'=>'success',
-        'code'=>200,
-        'data'=>[],
-        'status'=>1
+    private static array $message = [
+        'msg' => "",
+        'success' => 'success',
+        'code' => 200,
+        'data' => [],
+        'status' => 1
 
     ];
 

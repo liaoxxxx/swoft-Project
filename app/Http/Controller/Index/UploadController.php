@@ -7,7 +7,7 @@ namespace App\Http\Controller\Index;
 use App\Helper\AppProperty;
 use App\Helper\FileOperator;
 use App\Helper\HttpHeader;
-use App\Helper\JsonResponse;
+use App\Helper\Response\JsonResponse;
 use App\Model\Logic\GoodsCategoryLogic;
 use App\Model\Logic\UploadLogic;
 use ReflectionException;
