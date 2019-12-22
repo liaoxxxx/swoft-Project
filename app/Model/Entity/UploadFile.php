@@ -31,7 +31,7 @@ class UploadFile extends Model
 
     /**
      * @var string
-     * @Column(name="id")
+     * @Column(name="path")
      */
     private string $path;
 
