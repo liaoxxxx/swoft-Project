@@ -53,7 +53,7 @@ class DefaultHttpMiddleware implements MiddlewareInterface
             ->withHeader('Access-Control-Allow-Origin', '*')
             ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
             ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-        file_put_contents('/www/wwwroot/swoft-my/liao.log',print_r($response,true),FILE_APPEND);
+        //file_put_contents('/www/wwwroot/swoft-my/liao.log',print_r($response,true),FILE_APPEND);
         return $response;
 
 
