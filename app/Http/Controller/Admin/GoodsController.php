@@ -4,10 +4,10 @@ namespace App\Http\Controller\Admin;
 
 
 
+use App\Model\Entity\Goods;
+use App\Model\Logic\GoodsLogic;
 use ReflectionException;
 use Swoft;
-use Swoft\Bean\Exception\ContainerException;
-use Swoft\Context\Context;
 use Swoft\Http\Message\ContentType;
 use Swoft\Http\Message\Response;
 use Swoft\Http\Message\Request;
@@ -19,7 +19,7 @@ use Throwable;
 
 /**
  * Class HomeController
- * @Controller(prefix="/admin")
+ * @Controller(prefix="/admin_goods")
  */
 class GoodsController extends BaseController
 {
@@ -37,24 +37,24 @@ class GoodsController extends BaseController
     }
 
 
-
     /**
-     * @RequestMapping(route="/admin/goods_add", method={RequestMethod::POST})
+     * @RequestMapping(route="add_goods", method={RequestMethod::POST})
      * @param Request $request
      * @param Response $response
      * @return \Swoft\Http\Message\Response
+     * @throws ReflectionException
+     * @throws Swoft\Bean\Exception\ContainerException
+     * @throws Swoft\Db\Exception\DbException
      */
-    public function goods_add(Request $request,Response $response):Response {
-        $goodsName=$request->post('goodsName', 'default value');
-        $goodsColor=$request->post('goodsName', 'default value');
-        $goodsCategory=$request->post('goodsCategory', 'default value');
-        $goodsTruePrice=$request->post('goodsTruePrice', 'default value');
-        $goodsBasePrice=$request->post('goodsBasePrice', 'default value');
-        $goodsName=$request->post('goodsName', 'default value');
+    public function add_goods(Request $request,Response $response):Response {
+        $post=$request->post();
+        $goodsEn=GoodsLogic::buildEntityByDto($post);
 
 
 
 
+
+        $goodsEn->save();
         return $response->withContent("addd");
     }
 }
