@@ -12,6 +12,7 @@ use App\Model\Dao\UploadFileDao;
 use App\Model\Entity\UploadFile;
 use Dotenv\Regex\Error;
 use phpDocumentor\Reflection\Types\Self_;
+use Swoft\Db\Exception\DbException;
 
 class UploadLogic{
 
@@ -48,6 +49,8 @@ class UploadLogic{
     }
 
 
+
+
     public static function save2DB(string $path){
         $uploadFile=new UploadFile();
         $uploadFile->setPath($path);
@@ -58,19 +61,22 @@ class UploadLogic{
 
 
 
+
+
     public static  function handleSingleImage($file){
         //检测文件类型
         if( !self::checkFileType((new FileOperator)->getFileSuffixName($file->getClientFilename()),"IMAGE_TYPE")){
             return ["status"=>0,'msg'=>"文件类型不符合要求"];
         }
+        $path=(new FileOperator)->getImageBasePath();
+        $newFileName= time().mt_rand(100,999).".".(new \App\Helper\FileOperator)->getFileSuffixName($file->getClientFilename());
 
-        $newFileName=(new FileOperator)->getImageBasePath().time().mt_rand(100,999).".". (new \App\Helper\FileOperator)->getFileSuffixName($file->getClientFilename());
-        $file->moveTo($newFileName);
+        $file->moveTo($path.$newFileName);
 
-        self::save2DB($newFileName);
+        //self::save2DB($path.$newFileName);
 
 
-        return ['msg'=>"文件上传成功",'data'=>['path',$newFileName],'status'=>1];
+        return ['msg'=>"文件上传成功",'data'=>['name'=>$newFileName,'url'=>$path],'status'=>1];
     }
 
 
