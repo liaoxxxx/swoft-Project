@@ -19,4 +19,13 @@ class UploadFileDao
         }
     }
 
+    public static function insertGetId(UploadFile $uploadFile){
+        try {
+            $uploadFile->ins();
+        } catch (\ReflectionException $e) {
+        } catch (ContainerException $e) {
+        } catch (DbException $e) {
+        }
+    }
+
 }
