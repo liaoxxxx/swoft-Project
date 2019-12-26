@@ -6,6 +6,7 @@ namespace App\Model\Logic;
 
 use App\Model\Dao\Admin\AdminCacheStrategy;
 use App\Model\Dao\Goods\GoodsCategoryDao;
+use App\Model\Dao\Goods\GoodsDao;
 use App\Model\Entity\Admin;
 use App\Model\Entity\Goods;
 use App\Model\Entity\GoodsCategory;
@@ -36,10 +37,11 @@ class GoodsLogic
     public static function buildEntityByDto(array $post):Goods {
         $goods=new Goods($post);
 
+        $goods->setImages(self::serializeImages($post['images']));
         $goods->setCreatedAt(SqlTimeTool::getMicroTime());
         $goods->setUpdatedAt(SqlTimeTool::getMicroTime());
         $goods->setIsDelete(0);
-        var_dump($goods);
+
         return $goods;
 
     }
@@ -47,12 +49,19 @@ class GoodsLogic
 
     /**
      * 保存商品分类
-     * @param GoodsCategory $goodsCategory
+     * @param Goods $goods
      * @return bool
      */
-    public static function save(GoodsCategory $goodsCategory):bool {
+    public static function save(Goods $goods):bool {
 
-      return GoodsCategoryDao::save($goodsCategory);
+      return GoodsDao::save($goods);
+    }
+
+
+    public static function add(array $post): bool
+    {
+        $goodsEn =self::buildEntityByDto($post);
+       return  self::save($goodsEn);
     }
 
 
@@ -94,5 +103,21 @@ class GoodsLogic
     }
 
 
+
+    /**
+     * @param array $imageArr ||序列化前的数组
+     * @return string  || 序列化后获得的  图片路径 文本
+     */
+    public  static function serializeImages ( array $imageArr):string {
+        return serialize($imageArr);
+    }
+
+    /**
+     * @param string $imageString  || 序列化的图片路径 文本
+     * @return array  ||反序列化后获得的数组
+     */
+    public  static function unSerializeImages ( string $imageString):array {
+        return unserialize($imageString);
+    }
 
 }

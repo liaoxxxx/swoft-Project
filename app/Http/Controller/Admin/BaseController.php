@@ -19,33 +19,4 @@ use Throwable;
  */
 class BaseController
 {
-    /**
-     * @RequestMapping("/admin/hub")
-     * @return Response
-     * @throws ContainerException
-     * @throws Swoft\Exception\ContextException
-     * @throws Throwable
-     */
-    public function index(): Response
-    {
-        /** @var Renderer $renderer */
-        $renderer = Swoft::getBean('view');
-        $content  = $renderer->render('admin/index');
-
-        return Context::mustGet()->getResponse()->withContentType(ContentType::HTML)->withContent($content);
-    }
-
-    /**
-     * @RequestMapping("/hello[/{name}]")
-     * @param string $name
-     *
-     * @return Response
-     * @throws ReflectionException
-     * @throws ContainerException
-     * @throws Swoft\Exception\ContextException
-     */
-    public function hello(string $name): Response
-    {
-        return Context::mustGet()->getResponse()->withContent('Hello' . ($name === '' ? '' : ", {$name}"));
-    }
 }

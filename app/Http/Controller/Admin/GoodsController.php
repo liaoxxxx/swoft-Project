@@ -4,13 +4,12 @@ namespace App\Http\Controller\Admin;
 
 
 
+use App\Helper\LogTool;
+use App\Helper\Response\JsonResponse;
 use App\Model\Entity\Goods;
 use App\Model\Logic\GoodsLogic;
-use ReflectionException;
-use Swoft;
-use Swoft\Http\Message\ContentType;
-use Swoft\Http\Message\Response;
 use Swoft\Http\Message\Request;
+use Swoft\Http\Message\Response;
 use Swoft\Http\Server\Annotation\Mapping\Controller;
 use Swoft\Http\Server\Annotation\Mapping\RequestMapping;
 use Swoft\Http\Server\Annotation\Mapping\RequestMethod;
@@ -26,13 +25,14 @@ class GoodsController extends BaseController
 
 
     /**
-     * @RequestMapping(route="/admin/goods_list")
+     * @RequestMapping(route="list")
      * @param Request $request
      * @param Response $response
-     * @return \Swoft\Http\Message\Response
+     * @return Response
      */
     public function list(Request $request,Response $response): Response
     {
+        echo (new LogTool())->basePath;
         return $response->withContent("111");
     }
 
@@ -41,20 +41,18 @@ class GoodsController extends BaseController
      * @RequestMapping(route="add_goods", method={RequestMethod::POST})
      * @param Request $request
      * @param Response $response
-     * @return \Swoft\Http\Message\Response
-     * @throws ReflectionException
-     * @throws Swoft\Bean\Exception\ContainerException
-     * @throws Swoft\Db\Exception\DbException
+     * @return Response
      */
     public function add_goods(Request $request,Response $response):Response {
         $post=$request->post();
-        $goodsEn=GoodsLogic::buildEntityByDto($post);
+        $res=GoodsLogic::add($post);
 
+        if ($res){
+            return $response->withData(JsonResponse::Success('商品添加成功'));
+        }
+        else{
+            return $response->withData(JsonResponse::Error('商品添加失败'));
+        }
 
-
-
-
-        $goodsEn->save();
-        return $response->withContent("addd");
     }
 }

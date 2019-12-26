@@ -5,7 +5,7 @@ namespace App\Http\Controller\Admin;
 
 
 use App\Helper\HttpHeader;
-use App\Helper\JsonResponse;
+use App\Helper\Response\JsonResponse;
 use App\Model\Entity\GoodsCategory;
 use App\Model\Logic\GoodsCategoryLogic;
 use http\Exception;

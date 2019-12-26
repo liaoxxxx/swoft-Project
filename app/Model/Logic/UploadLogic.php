@@ -10,8 +10,6 @@ use App\Helper\JsonResponse;
 use App\Helper\SqlTimeTool;
 use App\Model\Dao\UploadFileDao;
 use App\Model\Entity\UploadFile;
-use Dotenv\Regex\Error;
-use phpDocumentor\Reflection\Types\Self_;
 use Swoft\Db\Exception\DbException;
 
 class UploadLogic{
@@ -76,7 +74,7 @@ class UploadLogic{
         //self::save2DB($path.$newFileName);
 
 
-        return ['msg'=>"文件上传成功",'data'=>['name'=>$newFileName,'url'=>$path],'status'=>1];
+        return ['msg'=>"文件上传成功",'data'=>['path'=>$path.$newFileName],'status'=>1];
     }
 
 

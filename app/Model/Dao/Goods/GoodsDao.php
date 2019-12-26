@@ -5,12 +5,20 @@ namespace App\Model\Dao\Goods;
 
 
 use App\Model\Entity\Admin;
+use App\Model\Entity\Goods;
 use Swoft\Bean\Exception\ContainerException;
 use Swoft\Db\Eloquent\Collection;
 use Swoft\Db\Exception\DbException;
 
 class GoodsDao
 {
+
+    public static array $map=[
+        'status'=>1,
+        'is_delete'=>0
+        ];
+
+
     /**
      * @param string $userName
      * @return Admin
@@ -33,5 +41,26 @@ class GoodsDao
         }
         //var_dump($admin);
         return  $admin;
+    }
+
+
+    public static function save(Goods $goods):bool {
+        try {
+            return $goods->save();
+        } catch (\ReflectionException $e) {
+            $e->getMessage();
+            return false;
+        } catch (ContainerException $e) {
+            return false;
+        } catch (DbException $e) {
+            return false;
+        }
+    }
+
+
+    public static function list(): Goods{
+
+
+        return Goods::where(self::$map)->get();
     }
 }
