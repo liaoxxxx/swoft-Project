@@ -28,6 +28,11 @@ class GoodsLogic
     }
 
 
+
+    public static function list():array {
+        return GoodsDao::list();
+    }
+
     /**
      * 通过post提交的数据构建 商品分类 Entity实体
      * @param array $post
@@ -35,9 +40,8 @@ class GoodsLogic
      * @throws DbException
      */
     public static function buildEntityByDto(array $post):Goods {
+        $post['images']=self::serializeImages($post['images']);
         $goods=new Goods($post);
-
-        $goods->setImages(self::serializeImages($post['images']));
         $goods->setCreatedAt(SqlTimeTool::getMicroTime());
         $goods->setUpdatedAt(SqlTimeTool::getMicroTime());
         $goods->setIsDelete(0);
@@ -53,8 +57,7 @@ class GoodsLogic
      * @return bool
      */
     public static function save(Goods $goods):bool {
-
-      return GoodsDao::save($goods);
+        return GoodsDao::save($goods);
     }
 
 
@@ -70,10 +73,10 @@ class GoodsLogic
      * @return array
      * @throws DbException
      */
-    public static function findOne(int $id  ): array
+    public static function findOne(int $id  )
     {
-         $cateGoryItem= GoodsCategoryDao::findOne($id);
-           return $cateGoryItem->toArray();
+        return GoodsDao::find($id);
+
     }
 
 

@@ -22,7 +22,11 @@ use function server;
 /**
  * Class EchoModule
  *
- * @WsModule("echo")
+ * @WsModule(
+ *      "/echo",
+ *     messageParser=JsonParser::class,
+ *     controllers={echoController::class}
+ * )
  */
 class EchoModule
 {

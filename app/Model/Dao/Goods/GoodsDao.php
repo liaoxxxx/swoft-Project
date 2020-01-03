@@ -45,6 +45,8 @@ class GoodsDao
 
 
     public static function save(Goods $goods):bool {
+
+        //$goods->setImages("2222");
         try {
             return $goods->save();
         } catch (\ReflectionException $e) {
@@ -58,9 +60,19 @@ class GoodsDao
     }
 
 
-    public static function list(): Goods{
+    public static function list(): array
+    {
+        return Goods::where(self::$map)->get()->toArray();
+    }
 
+    public static function find($id)
+    {
+        var_dump($id);
+        try {
+          return Goods::find($id)->toArray();
 
-        return Goods::where(self::$map)->get();
+        } catch (DbException $e) {
+            return new Goods();
+        }
     }
 }

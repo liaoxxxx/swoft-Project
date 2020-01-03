@@ -88,7 +88,8 @@ class Goods  extends Model
      */
     private string $showPrice;
 
-    /**@Column(name="images")
+    /**
+     * @Column(name="images")
      * @var string
      */
     private  string $images;
@@ -243,6 +244,15 @@ class Goods  extends Model
 
 
 
+
+    /**
+     * @return int
+     */
+    public function getCreatedAt(): int
+    {
+        return $this->createdAt;
+    }
+
     /**
      * @return string
      */
@@ -257,14 +267,6 @@ class Goods  extends Model
     public function setImages(string $images): void
     {
         $this->images = $images;
-    }
-
-    /**
-     * @return int
-     */
-    public function getCreatedAt(): int
-    {
-        return $this->createdAt;
     }
 
 
