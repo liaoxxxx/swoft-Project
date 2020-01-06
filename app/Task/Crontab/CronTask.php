@@ -25,11 +25,11 @@ use Swoft\Log\Helper\CLog;
 class CronTask
 {
     /**
-     * @Cron("* * * * * *")
+     * @Cron("1-20 * * * * *")
      *
      * @throws Exception
      */
-    public function secondTask(): void
+   /* public function secondTask(): void
     {
         // $user = new User();
         // $user->setAge(mt_rand(1, 100));
@@ -42,13 +42,21 @@ class CronTask
 
         CLog::info('second task run: %s ', date('Y-m-d H:i:s'));
         // CLog::info(JsonHelper::encode($user));
-    }
+    }*/
+
+    /**
+     * @Cron("* * * * * *")
+     */
+   /* public function secondTasks()
+    {
+        CLog::info("定时器测试: %s ", date('Y-m-d H:i:s', time()));
+    }*/
 
     /**
      * @Cron("0 * * * * *")
      */
-    public function minuteTask(): void
+    /*public function minuteTask(): void
     {
         CLog::info('minute task run: %s ', date('Y-m-d H:i:s'));
-    }
+    }*/
 }

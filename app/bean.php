@@ -37,12 +37,11 @@ return [
         ],
         'process'  => [
 //            'monitor' => bean(MonitorProcess::class)
-//            'crontab' => bean(CrontabProcess::class)
+         //   'crontab' => bean(Swoft\Crontab\Process\CrontabProcess::class)
         ],
         'on'       => [
-//            SwooleEvent::TASK   => bean(SyncTaskListener::class),  // Enable sync task
-            SwooleEvent::TASK   => bean(TaskListener::class),  // Enable task must task and finish event
-            SwooleEvent::FINISH => bean(FinishListener::class)
+            SwooleEvent::TASK   => \bean(TaskListener::class),  // Enable task must task and finish event
+            SwooleEvent::FINISH => \bean(FinishListener::class)
         ],
         /* @see HttpServer::$setting */
         'setting' => [
@@ -132,6 +131,9 @@ return [
             // 启用任务必须添加 task, finish 事件处理
             SwooleEvent::TASK => bean(TaskListener::class),
             SwooleEvent::FINISH => bean(FinishListener::class)
+        ],
+        'process' => [
+            'crontab' => bean(Swoft\Crontab\Process\CrontabProcess::class)
         ],
         'debug'   => 1,
         // 'debug'   => env('SWOFT_DEBUG', 0),

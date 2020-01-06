@@ -17,6 +17,8 @@ use Swoft\WebSocket\Server\Annotation\Mapping\OnOpen;
 use Swoft\WebSocket\Server\Annotation\Mapping\WsModule;
 use Swoole\WebSocket\Frame;
 use Swoole\WebSocket\Server;
+use Swoft\WebSocket\Server\Context;
+
 use function server;
 
 /**
@@ -47,6 +49,8 @@ class EchoModule
      */
     public function onMessage(Server $server, Frame $frame): void
     {
+        var_dump($frame);
         $server->push($frame->fd, 'Recv: ' . $frame->data);
+
     }
 }
