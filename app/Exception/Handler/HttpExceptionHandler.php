@@ -60,4 +60,6 @@ class HttpExceptionHandler extends AbstractHttpErrorHandler
         // Debug is true
         return $response->withData($data);
     }
+
+
 }
