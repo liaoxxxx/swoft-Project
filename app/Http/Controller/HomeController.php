@@ -7,6 +7,7 @@ use Swoft;
 use Swoft\Bean\BeanFactory;
 use Swoft\Bean\Exception\ContainerException;
 use Swoft\Context\Context;
+use Swoft\Exception\SwoftException;
 use Swoft\Http\Message\ContentType;
 use Swoft\Http\Message\Response;
 use Swoft\Http\Server\Annotation\Mapping\Controller;
@@ -38,7 +39,6 @@ class HomeController
      * @RequestMapping("/hi")
      *
      * @return Response
-     * @throws SwoftException
      */
     public function hi(): Response
     {
@@ -50,7 +50,6 @@ class HomeController
      * @param string $name
      *
      * @return Response
-     * @throws SwoftException
      */
     public function hello(string $name): Response
     {

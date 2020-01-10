@@ -35,6 +35,16 @@ class DBController
        echo print_r(    \Swoft::getBean('db'),true);
     }
 
+    /**
+     * @RequestMapping()
+     *
+     * @return void
+     */
+    public function test2(): void
+    {
+        echo print_r(    \Swoft::getBean('db'),true);
+    }
+
 
 
 }

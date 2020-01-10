@@ -14,6 +14,7 @@ use RuntimeException;
 use Swoft\Bean\Annotation\Mapping\Inject;
 use Swoft\Http\Server\Annotation\Mapping\Controller;
 use Swoft\Http\Server\Annotation\Mapping\RequestMapping;
+use Swoft\Log\Helper\CLog;
 use Swoft\Redis\Exception\RedisException;
 use Swoft\Redis\Pool;
 use Swoft\Redis\Redis;
@@ -129,18 +130,20 @@ class RedisController
     {
         sgo(function () {
             Redis::pipeline(function () {
-                throw new RuntimeException('');
-            });
+                CLog::info("开始时间 ".microtime(true));
+                for ($i = 0; $i <= 100000; $i++) {
+                    $name=  Redis::set("name".$i, "liaoxxx");
+                    $age=  Redis::set("age".$i, "18");
+                }
+                CLog::info("开始时间 ".microtime(true));            });
         });
 
-        Redis::pipeline(function () {
-            throw new RuntimeException('');
-        });
 
         return ['exPipeline'];
     }
 
     /**
+     * 使用事物批量添加
      * Only to use test. The wrong way to use it
      *
      * @RequestMapping("et")
@@ -151,14 +154,119 @@ class RedisController
     {
         sgo(function () {
             Redis::transaction(function () {
-                throw new RuntimeException('');
+                CLog::info("开始时间 ".microtime(true));
+                for ($i = 0; $i <= 100000; $i++) {
+                  $name=  Redis::set("name".$i, "liaoxxx");
+                  $age=  Redis::set("age".$i, "18");
+                }
+                CLog::info("开始时间 ".microtime(true));
+
             });
         });
-
-        Redis::transaction(function () {
-            throw new RuntimeException('');
-        });
+        //2020/01/10-16:17:22 [INFO] App\Http\Controller\RedisController:App\Http\Controller\{closure}(155) 开始时间 1578644242.3376
+        //2020/01/10-16:17:34 [INFO] App\Http\Controller\RedisController:App\Http\Controller\{closure}(160) 开始时间 1578644254.9984
 
         return ['exPipeline'];
     }
+
+
+    /**
+     *
+     * 使用事物批量删除
+     * Only to use test. The wrong way to use it
+     *
+     * @RequestMapping("et2")
+     *
+     * @return array
+     */
+    public function exTransaction2(): array
+    {
+        sgo(function () {
+            Redis::transaction(function () {
+                CLog::info("开始时间 ".microtime(true));
+                for ($i = 0; $i <= 100000; $i++) {
+                    $name=  Redis::del("name".$i);
+                    $age=  Redis::del("age".$i);
+                }
+                CLog::info("开始时间 ".microtime(true));
+
+            });
+        });
+
+        //2020/01/10-16:13:45 [INFO] App\Http\Controller\RedisController:App\Http\Controller\{closure}(181) 开始时间 1578644025.4906
+        //2020/01/10-16:13:58 [INFO] App\Http\Controller\RedisController:App\Http\Controller\{closure}(186) 开始时间 1578644038.8169
+
+        return ['exPipeline'];
+    }
+
+
+
+    /**
+     * 未使用事物批量添加
+     * Only to use test. The wrong way to use it
+     *
+     * @RequestMapping("net1")
+     *
+     * @return array
+     */
+    public function noExTransaction(): array
+    {
+        sgo(function () {
+
+            CLog::info("开始时间 " . microtime(true));
+            for ($i = 0; $i <= 100000; $i++) {
+                $name = Redis::set("name" . $i, "liaoxxx");
+                $age = Redis::set("age" . $i, "18");
+            }
+            CLog::info("开始时间 " . microtime(true));
+        });
+        //2020/01/10-16:19:59 [INFO] App\Http\Controller\RedisController:App\Http\Controller\{closure}(215) 开始时间 1578644399.5742
+        //2020/01/10-16:20:11 [INFO] App\Http\Controller\RedisController:App\Http\Controller\{closure}(220) 开始时间 1578644411.9251
+
+        return ['exPipeline'];
+    }
+
+    /**
+     *
+     * 使用事物批量删除
+     * Only to use test. The wrong way to use it
+     *
+     * @RequestMapping("net2")
+     *
+     * @return array
+     */
+    public function NoExTransaction2(): array
+    {
+        sgo(function () {
+
+            CLog::info("开始时间 ".microtime(true));
+            for ($i = 0; $i <= 100000; $i++) {
+                $name=  Redis::del("name".$i);
+                $age=  Redis::del("age".$i);
+            }
+            CLog::info("开始时间 ".microtime(true));
+
+        });
+
+        //2020/01/10-16:21:00 [INFO] App\Http\Controller\RedisController:App\Http\Controller\{closure}(241) 开始时间 1578644460.2365
+        //2020/01/10-16:21:12 [INFO] App\Http\Controller\RedisController:App\Http\Controller\{closure}(246) 开始时间 1578644472.3618
+
+        return ['exPipeline'];
+    }
+
+
+    /**
+     *
+     * 使用事物批量删除
+     * Only to use test. The wrong way to use it
+     *
+     * @RequestMapping("pub")
+     *
+     * @return void
+     */
+    public function publish(){
+       $res= Redis::publish('chan_1', 'Hello, World!');
+       Clog::info((string)$res);
+    }
+
 }
