@@ -260,13 +260,80 @@ class RedisController
      * 使用事物批量删除
      * Only to use test. The wrong way to use it
      *
+     * @RequestMapping("sub")
+     *
+     * @return void
+     */
+    public function subscribe(){
+       $f= function ($redis, $chan, $msg) {
+            switch($chan) {
+                case 'chan-1':
+                    CLog::info($msg."chan-1");
+                    CLog::info($chan."chan-1");
+                    CLog::info($redis."chan-1");
+                    break;
+
+                case 'chan-2':
+                    CLog::info($msg."chan-2");
+                    break;
+                case 'chan-3':
+                    CLog::info($msg."chan-3");
+                    break;
+            }
+        };
+
+        // 订阅 3 个频道
+        Redis::subscribe(['chan-1', 'chan-2', 'chan-3'], $f);
+
+
+
+
+    }
+
+
+    /**
+     *
+     * 使用事物批量删除
+     * Only to use test. The wrong way to use it
+     *
      * @RequestMapping("pub")
      *
      * @return void
      */
     public function publish(){
-       $res= Redis::publish('chan_1', 'Hello, World!');
-       Clog::info((string)$res);
+
+        // 发送消息
+        $res=Redis::publish('chan-1', 'Hello, World!');
+        CLog::info((string)$res);
+        // 发送消息
+        $res=Redis::publish('chan-2', 'Hello, Swoft!');
+        CLog::info((string)$res);
+
+
+        $f= function ($redis, $chan, $msg) {
+            switch($chan) {
+                case 'chan-1':
+                    CLog::info($msg."chan-1");
+                    CLog::info($chan."chan-1");
+                    CLog::info($redis."chan-1");
+                    break;
+
+                case 'chan-2':
+                    CLog::info($msg."chan-2");
+                    break;
+                case 'chan-3':
+                    CLog::info($msg."chan-3");
+                    break;
+            }
+        };
+
+        // 订阅 3 个频道
+        Redis::subscribe(['chan-1', 'chan-2', 'chan-3'], $f);
+    }
+
+    //
+    public function subscribeHandle($redis, $chan, $msg) {
+
     }
 
 }

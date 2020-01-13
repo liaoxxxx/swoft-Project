@@ -67,7 +67,6 @@ class GoodsDao
 
     public static function find($id)
     {
-        var_dump($id);
         try {
           return Goods::find($id)->toArray();
 

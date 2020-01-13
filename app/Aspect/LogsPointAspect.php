@@ -1,17 +1,7 @@
-<?php declare(strict_types=1);
-/**
- * This file is part of Swoft.
- *
- * @link     https://swoft.org
- * @document https://swoft.org/docs
- * @contact  group@swoft.org
- * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
- */
+<?php
 
 namespace App\Aspect;
 
-use Swoft\Aop\Point\JoinPoint;
-use Swoft\Aop\Point\ProceedingJoinPoint;
 use Swoft\Aop\Annotation\Mapping\After;
 use Swoft\Aop\Annotation\Mapping\AfterReturning;
 use Swoft\Aop\Annotation\Mapping\AfterThrowing;
@@ -21,29 +11,34 @@ use Swoft\Aop\Annotation\Mapping\Before;
 use Swoft\Aop\Annotation\Mapping\PointAnnotation;
 use Swoft\Aop\Annotation\Mapping\PointBean;
 use Swoft\Aop\Annotation\Mapping\PointExecution;
+use Swoft\Aop\Point\JoinPoint;
+use Swoft\Aop\Point\ProceedingJoinPoint;
+use Swoft\Log\Helper\CLog;
 use Throwable;
 
 /**
- * the test of aspcet
- *
- * @Aspect()
- *
- * @PointBean(
- *     include={AopBean::class},
- * )
- * @PointAnnotation(
- *     include={
- *      Cacheable::class,
- *      CachePut::class
- *      }
- *  )
- * @PointExecution(
- *     include={
- *      "Swoft\Testing\Aop\RegBean::reg.*",
- *     }
- * )
- */
-class AnnotationAspect
+* the test of aspcet
+*
+* @Aspect()
+*
+* @PointBean(
+*     include={AopBean::class},
+* )
+* @PointAnnotation(
+*     include={
+*      \App::class,
+*      CachePut::class
+*      }
+*  )
+* @PointExecution(
+*     include={
+*      "Swoft\Testing\Aop\RegBean::reg.*",
+ *     "App\Http\Controller\HttpClientController::calss"
+*     }
+* )
+*/
+
+class LogsPointAspect
 {
     /**
      * @Before()

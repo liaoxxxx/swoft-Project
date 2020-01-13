@@ -69,7 +69,7 @@ class GoodsCategoryLogic
 
 
     /**
-     * 生成缓存的key
+     * 编辑商品分类
      * @param array $post
      * @return bool
      * @throws DbException

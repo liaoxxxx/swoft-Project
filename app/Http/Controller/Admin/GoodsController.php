@@ -59,15 +59,15 @@ class GoodsController extends BaseController
 
 
     /**
-     * @RequestMapping(route="findone,method={RequestMethod::GET}")
+     * @RequestMapping(route="findone/{id}",method={RequestMethod::GET})
      * @param Request $request
      * @param Response $response
      * @return Response
      */
-    public function  findOne(Request $request,Response $response):Response{
+    public function  findOne(Request $request,Response $response,int $id):Response{
 
-        $goodsItem=[];
-        //$goodsItem= GoodsLogic::findOne((int)$id);
+        //$goodsItem=[];
+        $goodsItem= GoodsLogic::findOne((int)$id);
         return $response->withData(JsonResponse::Success('商品添加失败',$goodsItem));
     }
 
