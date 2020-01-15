@@ -32,16 +32,14 @@ class HttpExceptionHandler extends AbstractHttpErrorHandler
     /**
      * @param Throwable $e
      * @param Response   $response
-     *
      * @return Response
-     * @throws ReflectionException
-     * @throws ContainerException
      */
     public function handle(Throwable $e, Response $response): Response
     {
         // Log
         Log::error($e->getMessage());
-        CLog::error($e->getMessage());
+        CLog::error("文件/file:".$e->getFile()."  行/line:".$e->getLine()."  错误/error:".$e->getMessage());
+
 
         // Debug is false
         if (!APP_DEBUG) {

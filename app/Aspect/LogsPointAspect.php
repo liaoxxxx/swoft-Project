@@ -13,85 +13,61 @@ use Swoft\Aop\Annotation\Mapping\PointBean;
 use Swoft\Aop\Annotation\Mapping\PointExecution;
 use Swoft\Aop\Point\JoinPoint;
 use Swoft\Aop\Point\ProceedingJoinPoint;
+use Swoft\Http\Message\Request;
+use Swoft\Http\Message\Response;
 use Swoft\Log\Helper\CLog;
 use Throwable;
+use App\Model\Logic\Order\OrderLogic;
 
 /**
-* the test of aspcet
+* the test of aspect
 *
-* @Aspect()
+* @Aspect(order=1)
 *
-* @PointBean(
-*     include={AopBean::class},
-* )
-* @PointAnnotation(
-*     include={
-*      \App::class,
-*      CachePut::class
-*      }
-*  )
-* @PointExecution(
-*     include={
-*      "Swoft\Testing\Aop\RegBean::reg.*",
- *     "App\Http\Controller\HttpClientController::calss"
-*     }
-* )
+ * @PointBean(
+ *     include={OrderLogic::class},
+ * )
 */
 
 class LogsPointAspect
 {
-    /**
-     * @Before()
-     */
-    public function before()
-    {
-        file_put_contents("/www/wwwroot/swoft-my/runtime/liao.html","==============================",FILE_APPEND);
-        var_dump(' before1 ');
-    }
-
-    /**
-     * @After()
-     */
-    public function after()
-    {
-        file_put_contents("/www/wwwroot/swoft-my/runtime/liao.html","==============================",FILE_APPEND);
-        var_dump(' after1 ');
-    }
 
     /**
      * @AfterReturning()
      * @param JoinPoint $joinPoint
-     * @return string
+     * @return mixed
      */
     public function afterReturn(JoinPoint $joinPoint)
     {
-        $result = $joinPoint->getReturn();
 
-        file_put_contents("/www/wwwroot/swoft-my/runtime/liao.html","==============================",FILE_APPEND);
-        return $result . ' afterReturn1 ';
+        //$result = $joinPoint->getReturn();
+        /**
+         * @var Request $request
+         */
+        $request =$joinPoint->getArgs()[0];
+        $header= $request->getHeaders();
+        file_put_contents("/www/wwwroot/swoft-my/runtime/liao.html",print_r($header ,true),FILE_APPEND);
+        CLog::info( "afterReturn");
+        //var_dump(get_class( ));
+        return $joinPoint->getReturn() ;
     }
+
+
+
+
 
     /**
      * @Around()
      * @param ProceedingJoinPoint $proceedingJoinPoint
-     * @return mixed
      * @throws Throwable
      */
-    public function around(ProceedingJoinPoint $proceedingJoinPoint)
+    /*public function around(ProceedingJoinPoint $proceedingJoinPoint)
     {
-        $this->test .= ' around-before1 ';
-        $result = $proceedingJoinPoint->proceed();
-        $this->test .= ' around-after1 ';
-        file_put_contents("/www/wwwroot/swoft-my/runtime/liao.html","==============================",FILE_APPEND);
-        return $result . $this->test;
-    }
+        //$this->test .= ' around-before1 ';
+        //$result = $proceedingJoinPoint->proceed();
+        //$this->test .= ' around-after1 ';
+        file_put_contents("/www/wwwroot/swoft-my/runtime/liao.html"," around ==============================\r\n",FILE_APPEND);
+        //return $result . $this->test;
+    }*/
 
-    /**
-     * @AfterThrowing()
-     */
-    public function afterThrowing()
-    {
-        file_put_contents("/www/wwwroot/swoft-my/runtime/liao.html","==============================",FILE_APPEND);
-        echo "aop=1 afterThrowing !\n";
-    }
 }

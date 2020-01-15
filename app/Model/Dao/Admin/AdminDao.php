@@ -4,23 +4,25 @@
 namespace App\Model\Dao\Admin;
 
 
+use App\Exception\Handler\HttpExceptionHandler;
 use App\Model\Entity\Admin;
+use phpDocumentor\Reflection\Types\Mixed_;
+use PhpParser\Node\Expr\Cast\Object_;
 use Swoft\Bean\Exception\ContainerException;
+use Swoft\Db\Eloquent\Builder;
 use Swoft\Db\Eloquent\Collection;
+use Swoft\Db\Eloquent\Model;
 use Swoft\Db\Exception\DbException;
 
 class AdminDao
 {
     /**
      * @param string $userName
-     * @return Admin
-     * @throws DbException
+     * @return object|Builder|Model|null
      */
-    public static function findByUsername(string $userName): Admin
-    {
-        $admin=new Admin();
+    public static function findByUsername(string $userName) {
         try {
-            $admin= Admin::where('username', $userName)->firstOr( );
+         return   $admin= Admin::where('username', $userName)->first();
         }
         catch (\ReflectionException $e) {
             //var_dump($e);
@@ -32,6 +34,5 @@ class AdminDao
             //var_dump($e);
         }
         //var_dump($admin);
-        return  $admin;
     }
 }

@@ -4,9 +4,13 @@
 namespace App\Model\Logic;
 
 
+use App\Helper\Response\JsonResponse;
 use App\Model\Dao\Admin\AdminCacheStrategy;
+use App\Model\Dao\Admin\AdminDao;
 use App\Model\Entity\Admin;
+use Swoft\Context\Context;
 use Swoft\Db\Eloquent\Collection;
+use Swoft\Db\Exception\DbException;
 use Swoft\Http\Message\Request;
 
 
@@ -25,7 +29,7 @@ class AdminLogic
      * @param string $password
      * @return bool
      */
-    public static function checkPassword(Admin $admin,string $password):bool {
+    public static function checkPassword( $admin,string $password):bool {
 
         //var_dump($admin->getPassword());
         //var_dump(self::genPassword($admin->getSalt(), $password));
@@ -44,9 +48,11 @@ class AdminLogic
      * @param $admin  Admin
      * @return string
      */
-    public static function checkAdminStatus(Admin $admin): string {
-
-            return  '1';
+    public static function checkAdminStatus(Admin $admin): bool {
+        if (intval($admin->getStatus())==1){
+            return true;
+        }
+        return  false;
 
     }
 
@@ -93,6 +99,28 @@ class AdminLogic
         return "admin".$admin->getId();
     }
 
+    public static function handleLogin(string $username,string $password, $httpResponse =null){
+        if ($httpResponse==null){
+            $httpResponse = Context::mustGet()->getResponse();
+        }
+       // 查找用户
+       $admin= AdminDao::findByUsername($username);
+       if ($admin==null){
+
+           return $httpResponse->withData(JsonResponse::Error('用户不存在:admin  no exist') );
+       }
+       //判断密码
+       $checkBool= self::checkPassword($admin,$password);
+       if (!$checkBool){
+           return $httpResponse->withData(JsonResponse::Error('密码错误:password no match',) );
+       }
+
+        $checkBool= self::checkAdminStatus($admin);
+        if (!$checkBool){
+            return $httpResponse->withData(JsonResponse::Error('管理员已经被禁用:Administrators have been disabled',) );
+        }
+       return  $httpResponse->withData(JsonResponse::Success('登陆成功',) );
+    }
 
 
 }

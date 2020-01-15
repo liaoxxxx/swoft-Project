@@ -1,7 +1,7 @@
 <?php declare(strict_types=1);
 
 
-namespace App\Model\Logic;
+namespace App\Model\Logic\Goods;
 
 
 use App\Model\Dao\Admin\AdminCacheStrategy;

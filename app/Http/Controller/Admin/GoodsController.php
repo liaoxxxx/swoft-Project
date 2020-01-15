@@ -7,7 +7,7 @@ namespace App\Http\Controller\Admin;
 use App\Helper\LogTool;
 use App\Helper\Response\JsonResponse;
 use App\Model\Entity\Goods;
-use App\Model\Logic\GoodsLogic;
+use App\Model\Logic\Goods\GoodsLogic;
 use Swoft\Db\Exception\DbException;
 use Swoft\Http\Message\Request;
 use Swoft\Http\Message\Response;
@@ -62,7 +62,9 @@ class GoodsController extends BaseController
      * @RequestMapping(route="findone/{id}",method={RequestMethod::GET})
      * @param Request $request
      * @param Response $response
+     * @param int $id
      * @return Response
+     * @throws DbException
      */
     public function  findOne(Request $request,Response $response,int $id):Response{
 
