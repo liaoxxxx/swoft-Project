@@ -38,7 +38,7 @@ class HttpExceptionHandler extends AbstractHttpErrorHandler
     {
         // Log
         Log::error($e->getMessage());
-        CLog::error("文件/file:".$e->getFile()."  行/line:".$e->getLine()."  错误/error:".$e->getMessage());
+        CLog::error("文件/file:".$e->getFile()."\n  行/line:".$e->getLine()."  \n错误/error:".$e->getMessage()."\n");
 
 
         // Debug is false

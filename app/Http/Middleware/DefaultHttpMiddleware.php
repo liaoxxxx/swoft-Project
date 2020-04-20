@@ -19,6 +19,8 @@ use Swoft\Exception\SwoftException;
 use Swoft\Http\Message\Request;
 use Swoft\Http\Server\Contract\MiddlewareInterface;
 use Swoft\Context\Context;
+use Swoft\Http\Session\HttpSession;
+use Swoft\Redis\Redis;
 
 /**
  * Class FavIconMiddleware
@@ -27,6 +29,10 @@ use Swoft\Context\Context;
  */
 class DefaultHttpMiddleware implements MiddlewareInterface
 {
+    public static $noNeedLoginUri= [
+        '/admin/login'
+    ];
+
     /**
      * Process an incoming server request.
      * @param ServerRequestInterface $request
@@ -36,14 +42,13 @@ class DefaultHttpMiddleware implements MiddlewareInterface
      */
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
-        if ('OPTIONS' === $request->getMethod()) {
-            //file_put_contents("/www/wwwroot/swoft-my/liao.log",print_r(['method'=>'option'],true),FILE_APPEND);
-            $response = Context::mustGet()->getResponse();
-            return $this->configResponse($response);
-        }
+        $name= HttpSession::current()->get("name","888");
+        var_dump($name);
+        $response = \context()->getResponse();
+
+
         $response = $handler->handle($request);
         return $this->configResponse($response);
-
     }
 
     private function configResponse(ResponseInterface $response)
